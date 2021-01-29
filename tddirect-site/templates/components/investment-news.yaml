@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/investment-news.ftl
+renderType: site
+dialog: tddirect-site:components/investment-news
+description: Investment News component
+title: Investment News

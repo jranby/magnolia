@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/mobile-screens.ftl
+renderType: site
+dialog: tddirect-site:components/mobile-screens
+description: Mobile Screens
+title: Mobile Screens

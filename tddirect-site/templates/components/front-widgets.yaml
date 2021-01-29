@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/front-widgets.ftl
+renderType: site
+dialog: tddirect-site:components/front-widgets
+description: Front Widgets
+title: Front Widgets

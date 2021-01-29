@@ -1,0 +1,44 @@
+form:
+  tabs:
+    - name: tabPure360
+      label: Pure360
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+          description: Enter title, this is a large H2     
+        - name: text
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Text
+          description: Enter Text
+        - name: form
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Form Type
+          description: Choose the type of Pure360 form to display
+          required: true
+          options:
+            - name: signup
+              value: signup
+              label: General Signup
+              selected: true
+            - name: lloyds
+              value: lloyds
+              label: Lloyds IPO
+        - name: class
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: CSS Class
+          description: Choose Widget Class
+          required: true
+          options:
+            - name: default
+              value: widget-default
+              label: Default
+              selected: true
+            - name: alt
+              value: widget-alt
+              label: Alternate               
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

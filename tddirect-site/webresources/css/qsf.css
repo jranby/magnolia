@@ -1,0 +1,67 @@
+.choice-container { display: none; }
+.step-title { color: #1A5336; }
+.heading { margin: 0 0 20px 0; }
+.front { z-index: 2; }
+.back { -webkit-transform: rotateY(180deg); -moz-transform: rotateY(180deg); -ms-transform: rotateY(180deg); -o-transform: rotateY(180deg); transform: rotateY(180deg); position: absolute; }
+.shadow { -webkit-box-shadow: 0 0 10px #7b7b7b; -moz-box-shadow: 0 0 10px #7b7b7b; -o-box-shadow: 0 0 10px #7b7b7b; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; transition: all 0.5s ease-in-out; box-shadow: 0 0 10px #7b7b7b; background: #f9f9f9; }
+.choose-info { border: 1px solid #ddd; }
+.choose-info h2 { padding: 15px 0; }
+.selected .show-fund { background: #bf591d; color: #fff; text-decoration: none; }
+.risk-choice-container .info-card { display: block; width: 100%; position: relative; }
+.risk-choice-container .info-card .header { width: 100%; padding: 10px  15px; font-size: 18px; color: #fff; }
+.risk-choice-container .info-card .body { padding: 22px 20px; }
+.risk-choice-container .info-card .body p { height: 90px; }
+.risk-choice-container .info-card .low { border: 1px solid #00a312; }
+.risk-choice-container .info-card .low .header { background: #00a312; }
+.risk-choice-container .info-card .medium { border: 1px solid #007929; }
+.risk-choice-container .info-card .medium .header { background: #007929; }
+.risk-choice-container .info-card .high { border: 1px solid #165334; }
+.risk-choice-container .info-card .high .header { background: #165334; }
+.risk-choice-container .selected .show-type,
+.risk-choice-container .selected .show-fund { background: #bf591d; color: #fff; text-decoration: none; }
+.risk-choice-container .show-type,
+.risk-choice-container .show-fund {}
+.risk-choice-container .show-type:hover,
+.risk-choice-container .show-fund:hover { background: #bf591d; color: #fff; text-decoration: none; }
+.risk-choice-container .show-type .show-type,
+.risk-choice-container .show-fund .show-type { background: #bf591d; color: #fff; text-decoration: none; }
+.riskWarning { width: 650px !important; }
+.info-card.selected { background: #fff; }
+.info-card.selected .header { background: #fff !important; color: #00a312; border-bottom: 1px solid #00a312; background: #00a312; }
+.info-card.selected:after { content: ''; position: absolute; margin: -11px 0 0 0px; left: 155px; width: 30px; height: 30px; bottom: -16px; background: #fff; border-top: 1px solid transparent; border-right: 1px solid #00a312; border-bottom: 1px solid #00a312; border-left: 1px solid transparent; behavior: url(-ms-transform.htc); -moz-transform: rotate(45deg); -webkit-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); filter: progid:  XImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476); -ms-filter: "progid:DXImageTransform.Microsoft.Matrix(SizingMethod='auto  xpand', M11=0.7071067811865476, M12=-0.7071067811865475, M21=0.7071067811865475, M22=0.7071067811865476)" }
+.fund-wrap { display: none; margin: 20px 0 0 0; }
+.fund-wrap .fund-title { width: 100%; display: block; }
+.fund-wrap .fund-title h2 { padding: 0.5em 0.8em; color: #fff; }
+.fund-wrap .about-profile { padding: 10px 20px 10px 20px; background: #f7f7f7; }
+.fund-wrap .about-profile .profile-bullets { font-size: 16px; }
+.fund-wrap .fund-info { margin: 20px 0 0 0; }
+.fund-wrap .fund-info .header { padding: 20px; background: #00b624; } 
+.fund-wrap .fund-info .header h2 { padding: 0; color: #fff; }
+.fund-wrap .fund-info .expand-desc { margin: 10px 0 0 0; display: block; color: #b04a02; }
+.fund-wrap .fund-info .fund-deets { margin: 20px 0 0 0; }
+.fund-wrap .fund-info .fund-deets ul li span { font-size: 16px; }
+.fund-wrap .fund-info .fund-deets ul li:nth-child(2) { margin: 0 0 0 100px; }
+.fund-wrap .fund-info .performance-graph-wrap a { font-size: 16px; }
+.fund-wrap .fund-info .performance-graph-wrap .graph-wrapper { margin-top: 20px; }
+.fund-wrap .fund-info .expand-graph { color: #b04a02; }
+#chartdiv,
+#performanceDiv { height: 400px; width: 100%; font-size: 11px; }
+.download-buy { background: #f1f1f1; padding: 1em 0.8em; margin: 20px 0 0 0; }
+.download-buy ul { margin: 10px 0 0 0 ;}
+.download-buy ul li i { font-size: 14px; background: none !important }
+.download-buy ul li a { font-size: 14px }
+.download-buy .buy-button { margin: 10px 0 0 0 }
+.td-link-activeimageonhover { margin-left: 7px }
+.loading-wrap { text-align: center }
+.fund-wrap .fund-title { background: #00a312 }
+.fund-wrap .fund-title h2 { font-size: 24px }
+.profile-bullets li { background: none; padding:0; }
+.style-info { display: none; }
+.detail-more-wrap { display: none; }
+.graph-more-wrap { display: none; }
+.download-buy li { background-image:none !important; }
+.expand-content-graph { z-index: 20; }
+.fund-wrap .fund-info .fund-deets ul { margin: 0px !important; }
+.fund-wrap .fund-info .fund-deets ul li { display: block; margin: 0px 0px .65em 0px !important; }
+.fund-wrap .fund-info .performance-graph-wrap { margin-top: 100px !important; }
+.fund-video a:hover { background: none; }

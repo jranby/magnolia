@@ -1,0 +1,131 @@
+form:
+  tabs:
+    - name: tabGeneral
+      label: General
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+          description: Enter the main title, this is the page H1
+        - name: subtitle
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Subtitle
+          description: Enter subtitle, not really a subtitle, this outputs in brackets within the title as a span              
+        - name: text
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Text
+          description: Enter the available paragraph of text
+    - name: tabImage
+      label: Image
+      fields:
+        - name: bgImage
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Background Image
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent            
+    - name: tabButtons
+      label: Buttons
+      fields:
+        - name: buttons
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueSubnodeTransformer
+          label: Buttons
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+            layout: vertical
+            fields:
+              - name: buttonText
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: ""
+                description: Enter the button text
+              - name: buttonLink
+                class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+                transformerClass: info.magnolia.ui.form.field.transformer.composite.SwitchableTransformer
+                label: ""
+                options:
+                  - name: linkInternal
+                    label: Link Internal
+                    selected: true
+                    value: linkInternal
+                  - name: linkExternal
+                    label: Link External
+                    value: linkExternal
+                  - name: linkAnchor
+                    label: Link Anchor
+                    value: linkAnchor
+                    description: Enter the link button ID here WITHOUT a hash
+                  - name: linkAsset
+                    label: Link Asset
+                    value: linkAsset
+                fields:
+                  - name: linkInternal
+                    identifierToPathConverter:
+                      class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+                    class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                    label: ""
+                    targetWorkspace: website
+                    appName: pages
+                  - name: linkExternal
+                    class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                    label: ""
+                    rows: 1
+                  - name: linkAnchor
+                    class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                    label: ""
+                    rows: 1
+                  - name: linkAsset
+                    label: ""
+                    class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                    targetWorkspace: dam
+                    appName: assets
+                    contentPreviewDefinition: true
+                    identifierToPathConverter:
+                      class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                    contentPreviewDefinition:
+                      contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent                    
+              - name: buttonType
+                class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+                label: ""
+                options:
+                - name: white
+                  value: white
+                  label: White
+                - name: white-alt
+                  value: white-alt
+                  label: White Alt
+                - name: orange
+                  value: orange
+                  label: Orange
+                - name: green
+                  value: green
+                  label: Green
+                  selected: true
+                - name: dark-green
+                  value: dark-green
+                  label: Dark Green
+              - name: buttonTag
+                class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+                transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+                label: ""
+                layout: vertical
+                fields:
+                  - name: buttonTagCategory
+                    class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                    label: Tag Category
+                  - name: buttonTagAction
+                    class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                    label: Tag Action
+                  - name: buttonTagLabel
+                    class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                    label: Tag Label                   
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

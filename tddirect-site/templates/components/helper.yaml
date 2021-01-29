@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/helper.ftl
+renderType: freemarker
+dialog: tddirect-site:components/helper-blocks
+description: Helper Blocks
+title: Helper Blocks

@@ -1,0 +1,92 @@
+form:
+  tabs:       
+    - name: tabPanels
+      label: Panels
+      fields:
+        - name: bootstrapColumns
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Bootstrap Columns
+          description: Choose Bootstrap column CSS class, default is col-md-4
+          sortOptions: false
+          required: true
+          options:
+            - name: col-md-3
+              value: col-md-3
+              label: col-md-3
+            - name: col-md-4
+              value: col-md-4
+              label: col-md-4
+              selected: true
+            - name: col-md-6
+              value: col-md-6
+              label: col-md-6
+            - name: col-md-12
+              value: col-md-12
+              label: col-md-12        
+        - name: panels
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Panels
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            layout: vertical
+            fields:
+              - name: title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Title
+              - name: text
+                class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+                label: Text
+                lists: false
+                height: 175
+              - name: buttonType
+                class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+                label: Button Type
+                options:
+                - name: white
+                  value: white
+                  label: White
+                - name: white-alt
+                  value: white-alt
+                  label: White Alt
+                - name: orange
+                  value: orange
+                  label: Orange
+                - name: green
+                  value: green
+                  label: Green
+                - name: dark-green
+                  value: dark-green
+                  label: Dark Green
+              - name: buttonText
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Button Text
+                description: Enter the button text
+              - name: buttonInternalLink
+                identifierToPathConverter:
+                  class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                label: Button Internal Link
+                description: Choose button as internal page link
+                targetWorkspace: website
+                appName: pages
+              - name: buttonExternalLink
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Button External Link
+                description: Choose button as external link
+              - name: bgIcon
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: dam
+                appName: assets
+                label: Image
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

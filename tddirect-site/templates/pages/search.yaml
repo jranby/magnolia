@@ -1,0 +1,46 @@
+templateScript: /tddirect-site/templates/pages/search.ftl
+renderType: freemarker
+visible: true
+title: Search
+dialog: tddirect-site:pages/page-properties
+areas:
+  head:
+    templateScript: /tddirect-site/templates/components/head.ftl
+    type: noComponent
+  header:
+    templateScript: /tddirect-site/templates/components/header.ftl
+    type: noComponent
+    areas: 
+      navigation:
+        templateScript: /tddirect-site/templates/components/navigation.ftl
+        type: noComponent
+      mobile-menu:
+        templateScript: /tddirect-site/templates/components/mobile-menu.ftl
+        type: noComponent        
+  hero:
+    renderType: site
+    availableComponents:
+      hero:
+        id: tddirect-site:components/hero
+  footer:
+    templateScript: /tddirect-site/templates/components/footer.ftl
+    type: noComponent
+    areas:
+      help:
+        templateScript: /tddirect-site/templates/components/help.ftl
+        type: noComponent
+      webchat:
+        templateScript: /tddirect-site/templates/components/webchat.ftl
+        type: noComponent
+      connect:
+        templateScript: /tddirect-site/templates/components/connect.ftl
+        type: noComponent
+  analytics:
+    templateScript: /tddirect-site/templates/components/analytics.ftl
+    type: noComponent
+  cookie:
+    templateScript: /tddirect-site/templates/components/cookie.ftl
+    type: noComponent
+  ii-notice:
+    templateScript: /tddirect-site/templates/components/ii-notice.ftl
+    type: noComponent

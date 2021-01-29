@@ -1,0 +1,37 @@
+form:
+  tabs:       
+    - name: tabPanels
+      label: Panels
+      fields:
+        - name: bootstrapColumns
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Bootstrap Columns
+          description: Choose Bootstrap column CSS class, default is col-md-4
+          sortOptions: false
+          options:
+            - name: none
+              value: none
+              label: none
+            - name: col-md-2
+              value: col-md-2
+              label: col-md-2
+            - name: col-md-3
+              value: col-md-3
+              label: col-md-3
+            - name: col-md-4
+              value: col-md-4
+              label: col-md-4
+            - name: col-md-5
+              value: col-md-5ths
+              label: col-md-5
+            - name: col-md-6
+              value: col-md-6
+              label: col-md-6
+            - name: col-md-12
+              value: col-md-12
+              label: col-md-12
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

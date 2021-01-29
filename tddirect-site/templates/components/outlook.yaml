@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/outlook.ftl
+renderType: site
+dialog: tddirect-site:components/outlook
+description: Investment Outlook Video
+title: Investment Outlook Video

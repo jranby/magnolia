@@ -1,0 +1,121 @@
+form:
+  tabs:
+    - name: tabMobile
+      label: Mobile
+      fields:
+        - name: titleMobile
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+          required: true
+        - name: textMobile
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Text
+          lists: true
+          tables: true
+          height: 200
+          required: true
+        - name: imageMobile
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Image
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+          required: true        
+        - name: featuresMobile
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Features
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            layout: vertical
+            fields:
+              - name: title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Title
+              - name: text
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Text
+                rows: 2
+              - name: tip
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Tip
+                rows: 2                                  
+        - name: iosLinkMobile
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: IOS Download Link
+          description: Choose IOS Download button link
+          required: true
+          rows: 2
+        - name: androidLinkMobile
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Android Download Link
+          description: Choose Android Download button link
+          required: true    
+          rows: 2
+    - name: tabTablet
+      label: Tablet
+      fields:
+        - name: titleTablet
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+          required: true
+        - name: textTablet
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Text
+          lists: true
+          tables: true
+          height: 200
+          required: true
+        - name: imageTablet
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Image
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+          required: true        
+        - name: featuresTablet
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Features
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            layout: vertical
+            fields:
+              - name: title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Title
+              - name: text
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Text
+                rows: 2
+              - name: tip
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Tip
+                rows: 2                                  
+        - name: iosLinkTablet
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: IOS Download Link
+          description: Choose IOS Download button link
+          required: true
+          rows: 2
+        - name: androidLinkTablet
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Android Download Link
+          description: Choose Android Download button link
+          required: true
+          rows: 2
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

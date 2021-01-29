@@ -1,0 +1,109 @@
+form:
+  tabs:                 
+    - name: tabList
+      label: List
+      fields:
+        - name: type
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Type
+          options:
+            - name: none
+              value: none
+              selected: true
+              label: None
+            - name: number
+              value: number
+              label: Number                  
+            - name: tick
+              value: tick
+              label: Tick
+            - name: caret
+              value: caret
+              label: Caret
+            - name: bullet
+              value: bullet
+              label: Bullet
+            - name: x
+              value: x
+              label: X        
+        - name: list
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueSubnodeTransformer
+          label: List
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+            layout: vertical
+            fields:              
+              - name: text
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: ""
+                rows: 2
+                description: Enter the link text
+              - name: link
+                class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+                transformerClass: info.magnolia.ui.form.field.transformer.composite.SwitchableTransformer
+                label: ""
+                options:
+                  - name: linkInternal
+                    label: Internal
+                    selected: true
+                    value: linkInternal
+                  - name: linkExternal
+                    label: External
+                    value: linkExternal
+                  - name: linkStock
+                    label: Stock
+                    value: linkStock
+                  - name: linkFund
+                    label: Fund
+                    value: linkFund
+                  - name: linkArticle
+                    label: Article
+                    value: linkArticle
+                  - name: linkAsset
+                    label: Asset
+                    value: linkAsset
+                fields:
+                  - name: linkInternal
+                    identifierToPathConverter:
+                      class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+                    class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                    label: ""
+                    targetWorkspace: website
+                    appName: pages
+                  - name: linkExternal
+                    class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                    label: ""
+                    rows: 1
+                  - name: linkStock
+                    class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                    label: ""
+                    targetWorkspace: stocks
+                    appName: stocks
+                  - name: linkFund
+                    class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                    label: ""
+                    targetWorkspace: funds
+                    appName: funds
+                  - name: linkArticle
+                    class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                    label: ""
+                    targetWorkspace: articles
+                    appName: articles                                                         
+                  - name: linkAsset
+                    label: ""
+                    class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                    targetWorkspace: dam
+                    appName: assets
+                    contentPreviewDefinition: true
+                    identifierToPathConverter:
+                      class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                    contentPreviewDefinition:
+                      contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent                    
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

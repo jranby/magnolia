@@ -1,0 +1,78 @@
+form:
+  tabs:       
+    - name: tabStocks
+      label: Best Buys
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+          description: Enter the main title, defaults to 'Most Popular Stocks' if nothing entered
+        - name: bootstrapColumns
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Bootstrap Columns
+          description: Choose Bootstrap column CSS class, default is col-md-4
+          sortOptions: false
+          options:
+            - name: none
+              value: none
+              label: none
+            - name: col-md-2
+              value: col-md-2
+              label: col-md-2
+            - name: col-md-3
+              value: col-md-3
+              label: col-md-3
+            - name: col-md-4
+              value: col-md-4
+              label: col-md-4
+            - name: col-md-5
+              value: col-md-5ths
+              label: col-md-5
+            - name: col-md-6
+              value: col-md-6
+              label: col-md-6
+            - name: col-md-12
+              value: col-md-12
+              label: col-md-12
+        - name: date
+          class: info.magnolia.ui.form.field.definition.DateFieldDefinition
+          label: Date
+          time: true
+          type: Date
+          dateFormat: dd-MM-yyyy
+          timeFormat: HH
+          description: Enter the date and time this feed is set against
+          required: true              
+        - name: stocks
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Stocks
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            layout: vertical
+            fields:
+              - name: stockTitle
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Title
+              - name: stockBought
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Percentage Bought
+                required: true
+              - name: stockSold
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Percentage Sold
+                required: true
+              - name: stockLink
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                label: Stock Link
+                description: Choose stock as link
+                targetWorkspace: stocks
+                appName: stocks
+                required: true
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

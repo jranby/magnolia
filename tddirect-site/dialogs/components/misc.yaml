@@ -1,0 +1,28 @@
+form:
+  tabs:
+    - name: tabMain
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Enter title
+          description: Enter title
+        - name: bootstrapcol
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Choose col
+          description: choose col
+          options:
+            - name: col-md-6
+              value: col-md-6
+              label: col-md-6
+              selected: true
+            - name: col-md-4
+              value: col-md-4
+              label: col-md-4
+            - name: col-md-12
+              value: col-md-12
+              label: col-md-12
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

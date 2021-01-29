@@ -1,0 +1,22 @@
+form:
+  tabs:
+    - name: tabMain
+      label: Main
+      fields:
+        - name: id
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: ID
+          description: Enter the block ID, this is super important as the top links will anchor to the relevant block, entered should be lowercase a-z or "0-9"
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+          description: Enter the main title, this is the component block title                        
+        - name: text
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Text
+          description: Enter the available paragraph(s) of text
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

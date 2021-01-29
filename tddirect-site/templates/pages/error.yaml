@@ -1,0 +1,69 @@
+templateScript: /tddirect-site/templates/pages/error.ftl
+renderType: site
+visible: true
+type: error
+title: Error
+dialog: tddirect-site:pages/page-properties
+areas:
+  head:
+    templateScript: /tddirect-site/templates/components/head.ftl
+    type: noComponent  
+  header:
+    templateScript: /tddirect-site/templates/components/header.ftl
+    type: noComponent
+    areas: 
+      navigation:
+        templateScript: /tddirect-site/templates/components/navigation.ftl
+        type: noComponent
+      mobile-menu:
+        templateScript: /tddirect-site/templates/components/mobile-menu.ftl
+        type: noComponent        
+  footer:
+    templateScript: /tddirect-site/templates/components/footer.ftl
+    type: noComponent
+    inheritance:
+     enabled: true
+     components: all
+    areas:
+      help:
+        templateScript: /tddirect-site/templates/components/help.ftl
+        type: noComponent
+      webchat:
+        templateScript: /tddirect-site/templates/components/webchat.ftl
+        type: noComponent
+      connect:
+        templateScript: /tddirect-site/templates/components/connect.ftl
+        type: noComponent
+  analytics:
+    templateScript: /tddirect-site/templates/components/analytics.ftl
+    type: noComponent
+  cookie:
+    templateScript: /tddirect-site/templates/components/cookie.ftl
+    type: noComponent
+  ii-notice:
+    templateScript: /tddirect-site/templates/components/ii-notice.ftl
+    type: noComponent
+  main-top:
+    renderType: site
+    maxComponents: 1
+    editable: true
+    availableComponents:
+      main-top:
+        id: tddirect-site:components/main-top
+      main-top-alt:
+        id: tddirect-site:components/main-top-alt
+    inheritance:
+      enabled: true
+      components: all
+  main-content:
+     renderType: site
+     availableComponents:
+      main:
+        id: tddirect-site:components/main
+      accordion:
+        id: tddirect-site:components/accordion         
+  sidebar:
+     renderType: site
+     availableComponents:
+      sidebar:
+        id: tddirect-site:components/sidebar

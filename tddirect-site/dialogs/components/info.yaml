@@ -1,0 +1,49 @@
+form:
+  tabs:
+    - name: tabGeneral
+      label: General
+      fields:
+        - name: text
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Text
+          description: Enter the available paragraph of text for the top section
+          lists: false
+          height: 200
+          required: true
+        - name: buttonText
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Button Text          
+        - name: buttonLink
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter          
+          label: Button Link
+          description: Choose Link
+          targetWorkspace: website
+          appName: pages
+          required: true
+        - name: buttonType
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Button Type
+          options:
+            - name: white
+              value: white
+              label: White
+            - name: white-alt
+              value: white-alt
+              label: White Alt
+            - name: orange
+              value: orange
+              label: Orange
+            - name: green
+              value: green
+              label: Green
+              selected: true
+            - name: dark-green
+              value: dark-green
+              label: Dark Green          
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

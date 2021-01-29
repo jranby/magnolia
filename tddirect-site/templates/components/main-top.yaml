@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/main-top.ftl
+renderType: site
+dialog: tddirect-site:components/main-top
+description: Main Top
+title: Main Top

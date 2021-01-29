@@ -1,0 +1,19 @@
+form:
+  tabs:
+    - name: tabMain
+      fields:
+        - name: quote
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Quote
+          description: Enter the main quote text
+          rows: 5
+        - name: author
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Cite
+          description: Enter the quote author
+          rows: 1      
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

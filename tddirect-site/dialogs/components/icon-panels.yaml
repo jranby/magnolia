@@ -1,0 +1,71 @@
+form:
+  tabs:       
+    - name: tabPanels
+      label: Panels
+      fields:
+        - name: bootstrapColumns
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Bootstrap Columns
+          description: Choose Bootstrap column CSS class, default is col-md-4
+          sortOptions: false
+          required: true
+          options:
+            - name: col-md-3
+              value: col-md-3
+              label: col-md-3
+            - name: col-md-4
+              value: col-md-4
+              label: col-md-4
+              selected: true
+            - name: col-md-6
+              value: col-md-6
+              label: col-md-6
+            - name: col-md-12
+              value: col-md-12
+              label: col-md-12        
+        - name: panels
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Panels
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            layout: vertical
+            fields:
+              - name: theme
+                class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+                label: ""
+                sortOptions: false
+                required: true
+                options:
+                  - name: light
+                    value: light
+                    label: Light
+                    selected: true
+                  - name: dark
+                    value: dark
+                    label: Dark               
+              - name: title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Title
+              - name: text
+                class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+                label: Text
+                lists: false
+                tables: false
+                height: 175
+              - name: bgIcon
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: dam
+                appName: assets
+                label: Background Icon
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent                 
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

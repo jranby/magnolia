@@ -1,0 +1,9 @@
+templateScript: /tddirect-site/templates/pages/compliance.ftl
+renderType: site
+visible: true
+title: Compliance
+dialog: tddirect-site:pages/page-properties
+areas:
+  head:
+    templateScript: /tddirect-site/templates/components/head.ftl
+    type: noComponent

@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/chart.ftl
+renderType: site
+dialog: tddirect-site:components/chart
+description: Display an AM Chart
+title: Chart

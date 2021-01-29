@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/best-buys.ftl
+renderType: site
+dialog: tddirect-site:components/best-buys
+description: Best Buys
+title: Best Buys

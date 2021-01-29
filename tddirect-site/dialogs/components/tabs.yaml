@@ -1,0 +1,72 @@
+form:
+  tabs:       
+    - name: tabTabs
+      label: Tabs
+      fields:
+        - name: tabs
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Tabs
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            layout: vertical
+            fields:
+              - name: slug
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Slug
+                description: You must enter a slug as this will be used to target the relevant tab by Jquery
+              - name: title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Title
+              - name: text
+                class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+                label: Text
+                lists: true
+                tables: true
+                height: 200
+              - name: buttonType
+                class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+                label: Button Type
+                options:
+                - name: white
+                  value: white
+                  label: White
+                - name: white-alt
+                  value: white-alt
+                  label: White Alt
+                - name: orange
+                  value: orange
+                  label: Orange
+                - name: green
+                  value: green
+                  label: Green
+                - name: dark-green
+                  value: dark-green
+                  label: Dark Green
+              - name: buttonText
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Button Text
+                description: Enter the button text
+              - name: buttonLink
+                identifierToPathConverter:
+                  class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                label: Button Link
+                description: Choose button link
+                targetWorkspace: website
+                appName: pages
+              - name: chart
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Chart ID
+                description: Add chart ID (no hash#) to target JS for chart display
+              - name: chartHeight
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Chart Height
+                description: Enter the height of the chart (integer no px)               
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

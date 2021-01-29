@@ -1,0 +1,103 @@
+form:
+  tabs:
+    - name: tabGeneral
+      label: General
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+          description: Enter title, this is a large H2     
+        - name: text
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Text
+          description: Enter Text          
+    - name: tabButton
+      label: Button
+      fields:
+        - name: button
+          class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+          transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+          label: Button
+          layout: vertical
+          fields:
+            - name: buttonTitle
+              class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              label: Title
+            - name: buttonLink
+              class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+              transformerClass: info.magnolia.ui.form.field.transformer.composite.SwitchableTransformer
+              label: ""
+              options:
+                - name: linkInternal
+                  label: Link Internal
+                  selected: true
+                  value: linkInternal
+                - name: linkExternal
+                  label: Link External
+                  value: linkExternal                  
+              fields:
+                - name: linkInternal
+                  identifierToPathConverter:
+                    class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+                  class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                  label: ""
+                  targetWorkspace: website
+                  appName: pages
+                - name: linkExternal
+                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                  label: ""
+                  rows: 1                 
+            - name: buttonType
+              class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+              label: Type
+              options:
+                - name: white
+                  value: white
+                  label: White
+                - name: white-alt
+                  value: white-alt
+                  label: White Alt
+                - name: orange
+                  value: orange
+                  label: Orange
+                - name: green
+                  value: green
+                  label: Green
+                  selected: true
+                - name: dark-green
+                  value: dark-green
+                  label: Dark Green
+    - name: tabTopics
+      label: Topics
+      fields:        
+        - name: topics
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Topics
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            layout: vertical
+            fields:
+              - name: title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Title
+              - name: link
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Link
+                rows: 1
+              - name: icon
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: dam
+                appName: assets
+                label: Icon
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

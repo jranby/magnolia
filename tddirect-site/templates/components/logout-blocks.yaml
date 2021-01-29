@@ -1,0 +1,32 @@
+templateScript: /example/templates/components/logout-blocks.ftl
+description: A component for creating tow columns in an area
+renderType: site
+title: Logout Blocks
+areas:
+ leftColumn:
+  maxComponents: 1
+  availableComponents:
+     risers-fallers:
+      id: tddirect-site:components/risers-fallers
+     investment-news:
+      id: tddirect-site:components/investment-news
+     best-buys:
+      id: tddirect-site:components/best-buys
+ centerColumn:
+  maxComponents: 1
+  availableComponents:
+     risers-fallers:
+      id: tddirect-site:components/risers-fallers
+     investment-news:
+      id: tddirect-site:components/investment-news
+     best-buys:
+      id: tddirect-site:components/best-buys                  
+ rightColumn:
+  maxComponents: 1
+  availableComponents:
+     risers-fallers:
+      id: tddirect-site:components/risers-fallers
+     investment-news:
+      id: tddirect-site:components/investment-news
+     best-buys:
+      id: tddirect-site:components/best-buys 

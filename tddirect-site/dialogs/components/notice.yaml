@@ -1,0 +1,42 @@
+form:
+  tabs:
+    - name: tabNotice
+      label: Notice
+      fields:
+        - name: noticeTitle
+          label: Notice Title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          description: Enter a title to be used in the notice component.
+          i18n: true
+        - name: noticeText
+          label: Notice Text
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          description: Enter text to be used in the notice component.
+          i18n: true
+          lists: true
+          tables: false
+        - name: bootstrapAlert
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Bootstrap Alert Type
+          description: Choose Bootstrap alert CSS class, this determines the style used on the frontend.
+          sortOptions: false
+          required: true
+          options:
+            - name: warning
+              value: warning
+              label: Warning
+            - name: success
+              value: success
+              label: Success
+            - name: info
+              value: info
+              label: Info
+              selected: true
+            - name: danger
+              value: danger
+              label: Danger          
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

@@ -1,0 +1,80 @@
+templateScript: /tddirect-site/templates/pages/logout.ftl
+renderType: site
+visible: true
+title: Logout
+dialog: tddirect-site:pages/page-properties
+areas:
+  head:
+    templateScript: /tddirect-site/templates/components/head.ftl
+    type: noComponent  
+  header:
+    templateScript: /tddirect-site/templates/components/header.ftl
+    type: noComponent
+    areas: 
+      navigation:
+        templateScript: /tddirect-site/templates/components/navigation.ftl
+        type: noComponent
+      mobile-menu:
+        templateScript: /tddirect-site/templates/components/mobile-menu.ftl
+        type: noComponent
+  footer:
+    templateScript: /tddirect-site/templates/components/footer.ftl
+    type: noComponent
+    inheritance:
+     enabled: true
+     components: all
+    areas:
+      help:
+        templateScript: /tddirect-site/templates/components/help.ftl
+        type: noComponent
+      webchat:
+        templateScript: /tddirect-site/templates/components/webchat.ftl
+        type: noComponent
+      connect:
+        templateScript: /tddirect-site/templates/components/connect.ftl
+        type: noComponent
+  analytics:
+    templateScript: /tddirect-site/templates/components/analytics.ftl
+    type: noComponent
+  cookie:
+    templateScript: /tddirect-site/templates/components/cookie.ftl
+    type: noComponent
+  ii-notice:
+    templateScript: /tddirect-site/templates/components/ii-notice.ftl
+    type: noComponent
+  main-top:
+    renderType: site
+    maxComponents: 1
+    editable: true
+    availableComponents:
+      main-top:
+        id: tddirect-site:components/main-top
+      main-top-alt:
+        id: tddirect-site:components/main-top-alt
+    inheritance:
+      enabled: false
+      components: all        
+  logout-blocks:
+    renderType: site
+    availableComponents:
+      risers-fallers:
+        id: tddirect-site:components/risers-fallers
+      investment-news:
+        id: tddirect-site:components/investment-news
+      best-buys:
+        id: tddirect-site:components/best-buys
+  logout-blocks-alt:
+    renderType: site
+    availableComponents:
+      risers-fallers:
+        id: tddirect-site:components/risers-fallers
+      investment-news:
+        id: tddirect-site:components/investment-news
+      best-buys:
+        id: tddirect-site:components/best-buys        
+  spiel:
+    renderType: site
+    maxComponents: 1
+    availableComponents:
+      spiel:
+        id: tddirect-site:components/spiel         

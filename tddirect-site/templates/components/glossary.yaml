@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/glossary.ftl
+renderType: site
+dialog: tddirect-site:components/glossary
+description: A glossary block
+title: Glossary Block

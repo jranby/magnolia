@@ -1,0 +1,81 @@
+form:
+  tabs:         
+    - name: tabLinks
+      label: Links
+      fields:
+        - name: bootstrapColumns
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Bootstrap Columns
+          description: Choose Bootstrap column CSS class, if more than 7 links added, this column choice will not be used
+          sortOptions: false
+          required: true
+          options:
+            - name: none
+              value: none
+              label: none
+            - name: col-md-2
+              value: col-md-2
+              label: col-md-2
+            - name: col-md-3
+              value: col-md-3
+              label: col-md-3
+            - name: col-md-4
+              value: col-md-4
+              label: col-md-4
+            - name: col-md-5
+              value: col-md-5ths
+              label: col-md-5
+            - name: col-md-6
+              value: col-md-6
+              label: col-md-6
+            - name: col-md-12
+              value: col-md-12
+              label: col-md-12
+        - name: links
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueSubnodeTransformer
+          label: Links
+          required: false
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+            layout: vertical
+            fields:
+              - name: linkText
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: ""
+                description: Enter the link text
+              - name: linkDarkBtn
+                class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+                label: ""
+                buttonLabel: Make the link a darker green button                
+              - name: linkUrl
+                class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+                transformerClass: info.magnolia.ui.form.field.transformer.composite.SwitchableTransformer
+                label: ""
+                options:
+                  - name: linkInternal
+                    label: Link Internal
+                    selected: true
+                    value: linkInternal
+                  - name: linkExternal
+                    label: Link External
+                    value: linkExternal
+                fields:
+                  - name: linkInternal
+                    identifierToPathConverter:
+                      class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+                    class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                    label: ""
+                    targetWorkspace: website
+                    appName: pages
+                  - name: linkExternal
+                    class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                    label: ""
+                    rows: 1
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

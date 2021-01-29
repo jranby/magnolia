@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/section-choices.ftl
+renderType: site
+dialog: tddirect-site:components/section-choices
+description: Section Choices
+title: Section Choices

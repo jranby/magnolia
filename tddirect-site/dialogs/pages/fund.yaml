@@ -1,0 +1,199 @@
+form:
+  tabs:
+    - name: tabMain
+      label: Main
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+        - name: instrumentAlpha
+          label: Instrument Alpha
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+        - name: instrumentNumeric
+          label: Instrument Numeric
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+        - name: hideFromSearch
+          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+          label: Hide From Search?
+          description: Check for this page to be hidden from search results as they display by default.
+          buttonLabel: ""
+          defaultValue: false          
+    - name: tabMainBase
+      label: Navigation
+      fields:
+        - name: title
+          label: Title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+        - name: navigationTitle
+          label: Navigation Title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+        - name: hideInNav
+          label: Hide In Nav
+          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+          defaultValue: false
+          i18n: false
+          type: Boolean
+          buttonLabel: ""   
+    - name: tabMainBase
+      label: Navigation
+      fields:
+        - name: title
+          label: Title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+        - name: navigationTitle
+          label: Navigation Title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+        - name: hideInNav
+          label: Hide In Nav
+          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+          defaultValue: false
+          i18n: false
+          type: Boolean
+          buttonLabel: ""
+    - name: tabMetaBase
+      label: Meta
+      fields:
+        - name: metaTitle
+          label: Meta Title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true        
+        - name: keywords
+          label: Keywords
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+          rows: 3
+        - name: description
+          label: Description
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+          rows: 5
+        - name: canonical
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          label: Canonical Internal Link
+          description: Choose canonical link, if this is not chosen the current page url is rendered as fallback
+          targetWorkspace: website
+          appName: pages
+        - name: canonicalExternal
+          label: Canonical External Link
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+        - name: robots
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Robots
+          description: Choose the robots meta tag to output, leave empty to hide.
+          options:
+            - name: none
+              value: ""
+              label: ""
+              selected: true
+            - name: all
+              value: all
+              label: all
+            - name: index-nofollow
+              value: index, nofollow
+              label: index, nofollow
+            - name: noindex-follow
+              value: noindex, follow
+              label: noindex, follow            
+            - name: noindex-nofollow
+              value: noindex, nofollow
+              label: noindex, nofollow
+    - name: tabOpenGraph
+      label: OpenGraph
+      fields:
+        - name: ogUrl
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          label: Og:Url Internal
+          description: Choose the opengraph url link, if this is not chosen the current page url is rendered as fallback
+          targetWorkspace: website
+          appName: pages
+        - name: ogUrlExternal
+          label: Og:Url External
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true        
+          description: Choose the opengraph url link, if this is not chosen the current page url is rendered as fallback
+        - name: ogTitle
+          label: Og:Title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+        - name: ogDescription
+          label: Og:Description
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+          rows: 5
+        - name: ogImage
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Og:Image
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+    - name: tabBreadcrumbs
+      label: Breadcrumbs
+      fields:
+        - name: hideBreadcrumbs
+          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+          label: Hide?
+          description: Check for this page to hide the breadcrumbs as they display by default.
+          buttonLabel: ""
+          defaultValue: false
+        - name: titleBreadcrumbs
+          label: Breadcrumbs Title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          description: Enter a custom title to be used in the breadcrumbs for this page.
+          i18n: true
+    - name: tabAlert
+      label: Risk Alert
+      fields:
+        - name: alertDisplay
+          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+          label: Alert Display?
+          description: Check for this page to display an alert, this alert is hidden by default.
+          buttonLabel: ""
+          defaultValue: false
+        - name: alertTitle
+          label: Alert Title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          description: Enter a title to be used in the alert for this page.
+          i18n: true
+        - name: alertText
+          label: Alert Text
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          description: Enter text to be used in the alert for this page.
+          i18n: true
+          lists: true
+          tables: false
+    - name: tabCookie
+      label: Cookie
+      fields:
+        - name: cookieName
+          label: Cookie Name
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          description: Enter a name for the cookie
+          i18n: true
+        - name: cookieValue
+          label: Cookie Value
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          description: Enter a value for the cookie, if nothing entered default is 1
+          i18n: true          
+        - name: cookieLength
+          label: Cookie Length
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          description: Enter a day length for the cookie, if nothing entered default is 30
+          i18n: true
+
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

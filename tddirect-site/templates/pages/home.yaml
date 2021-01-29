@@ -1,0 +1,75 @@
+templateScript: /tddirect-site/templates/pages/home.ftl
+renderType: site
+visible: true
+type: home
+title: Home
+dialog: tddirect-site:pages/page-properties
+areas:
+  head:
+    templateScript: /tddirect-site/templates/components/head.ftl
+    type: noComponent
+  header:
+    templateScript: /tddirect-site/templates/components/header.ftl
+    type: noComponent
+    areas: 
+      navigation:
+        templateScript: /tddirect-site/templates/components/navigation.ftl
+        type: noComponent
+      mobile-menu:
+        templateScript: /tddirect-site/templates/components/mobile-menu.ftl
+        type: noComponent        
+  notice:
+    renderType: site
+    maxComponents: 1
+    availableComponents:
+      notice:
+        id: tddirect-site:components/notice
+  hero:
+    renderType: site
+    maxComponents: 1
+    availableComponents:
+      hero:
+        id: tddirect-site:components/hero
+  spiel:
+    renderType: site
+    maxComponents: 1
+    availableComponents:
+      spiel:
+        id: tddirect-site:components/spiel        
+  footer:
+    templateScript: /tddirect-site/templates/components/footer.ftl
+    type: noComponent
+    areas:
+      help:
+        templateScript: /tddirect-site/templates/components/help.ftl
+        type: noComponent
+      webchat:
+        templateScript: /tddirect-site/templates/components/webchat.ftl
+        type: noComponent
+      connect:
+        templateScript: /tddirect-site/templates/components/connect.ftl
+        type: noComponent
+  analytics:
+    templateScript: /tddirect-site/templates/components/analytics.ftl
+    type: noComponent
+  cookie:
+    templateScript: /tddirect-site/templates/components/cookie.ftl
+    type: noComponent
+  ii-notice:
+    templateScript: /tddirect-site/templates/components/ii-notice.ftl
+    type: noComponent
+  helper:
+    renderType: site
+    maxComponents: 1
+    availableComponents:
+      helper:
+        id: tddirect-site:components/helper
+  quick-quote:
+    templateScript: /tddirect-site/templates/components/quick-quote.ftl
+    type: noComponent
+  front-widgets:
+     renderType: site
+     maxComponents: 2
+     availableComponents:
+      widget:
+        id: tddirect-site:components/front-widgets               

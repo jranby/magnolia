@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/quote.ftl
+renderType: site
+dialog: tddirect-site:components/quote
+description: Quote component outputting a blockquote
+title: Quote

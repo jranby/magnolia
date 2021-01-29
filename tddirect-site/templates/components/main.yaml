@@ -1,0 +1,11 @@
+templateScript: /tddirect-site/templates/components/main.ftl
+renderType: site
+dialog: tddirect-site:components/main
+description: Main
+title: Main
+
+# decorate or extend parameters when needed
+#parameters:
+  #divClass: my-component-divz
+  #imageWrapperClass: my-wrapperz
+  #imgClass: my-image foobarImage

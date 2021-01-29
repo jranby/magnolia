@@ -1,0 +1,393 @@
+/* ------------------------------------------------------------
+	01: ii Rebranding
+------------------------------------------------------------ */
+
+body { background-image: none !important; background-repeat: repeat; color: #3C4953; font-family: "Source Sans Pro", sans-serif; }
+
+h1, h2, h3, h4, h5, h6, { font-family: "Source Sans Pro", sans-serif !important; }
+ul li { font-family: "Source Sans Pro", sans-serif !important; }
+
+/* #header { background-color: #fff; }
+#header:before { position: absolute; top: 0px; left: 0px; right: 0px; content: ''; display: block; height: 4px; width: 100%; background-image: linear-gradient(135deg, #00F0F0 0%, #FF78FF 100%); z-index: 2; } */
+
+/* table */
+.table-alt thead { background-color: #7C5CC1; }
+
+/* breadcrumb */
+.breadcrumbs .breadcrumb li a { color: #0074E0; }
+.breadcrumbs .breadcrumb li.active { color: #3C4953; }
+
+/* btn */
+.btn { color: #3C4953; }
+.btn-white-alt { background-color: #fff; color: #2e2e2e; border: 1px solid #53284F; }
+.btn-orange { background-color: #7C5CC1; color: #fff; }
+.btn-green { background-color: #eceded; color: #000; border: 1px solid #53284F; }
+
+/* panels */
+.panel-default > .panel-heading { background-color: #3C4953; }
+
+
+/* logo */
+.logo { display: none; }
+.logo-mobile { display: none; }
+.logo-ii { display: inline-block; width: 50px; height: 50px; margin-top: 0px; float: left; }
+
+@media (min-width: 768px)
+{
+	.logo-ii { margin-top: 6px; }
+}
+
+@media (min-width: 992px)
+{
+	.logo-ii { margin-right: 100px; }
+}
+
+/* menu */
+.menu > li > a:hover,
+.menu > li.current > a { color: #7C5CC1; }
+
+/* login link */
+#menu-login { background-color: #7C5CC1; }
+
+/* children a */
+.menu ul li a { color: #363636; }
+.menu ul li:hover a,
+.menu ul li.current a { color: #7C5CC1; }
+
+/* megamenu */
+.megamenu h3 { color: #3C4953; }
+
+/* main */
+#main .main-title { color: #3C4953; }
+#main-top .main-title { color: #3C4953; }
+#main-search .input-group { border: 1px solid #3C4953; }
+#main-content .main-block-title { color: #3C4953; }
+#main-content .main-content-block .main-content-title-large { color: #3C4953; }
+#main-content .main-content-block .main-content-inner-title { color: #3C4953; }
+#main-top-alt .main-title {color: #fff;}
+
+@media (max-width: 767px)
+{   
+    #main-top .main-title { color: #fff; }
+}
+
+/* sidebar */
+#sidebar { background-color: #3C4953; color: #fff; }
+
+/* widget */
+.widget-alt { background-color: #3C4953; color: #fff; }
+.widget-alt:before {background-color: #6d777e;}
+.widget-links li a { color: #53284F; }
+
+/* helper blocks */
+#how-to-help .helper-title { color: #3C4953; }
+#helper-blocks .helper-block .helper-block-title a,
+.quick-quote-toggler .quick-quote-text,
+#market-top .market-title { color: #3C4953; }
+#investment-disclaimer p:after { color: #fff; }
+
+/* toggler */
+.toggler { color: #3C4953; }
+
+/* section */
+#section-choices { background-color: #3C4953; }
+#section-choices .choices .choice:hover:after,
+#section-choices .choices .choice.current:after { border-top: 12px solid #3C4953; }
+#section-choices-alt { background-color: #3C4953;  }
+#section-choices-alt .choices .choice:hover:after,
+#section-choices-alt .choices .choice.current:after { border-top: 12px solid #3C4953; }
+
+/* fund */
+.fund-articles .fund-article .fund-article-title { color: #3C4953; }
+.fund-articles .fund-article .read-more { color: #3C4953; }
+
+/* news */
+.news-articles .news-article .news-article-title { color: #3C4953; }
+.news-articles .news-article .news-article-date { color: #3C4953; }
+.news-articles .news-article .read-more { float: right; color: #3C4953; }
+.news-article .article-meta .article-category { color: #3C4953; }
+
+/* sharer */
+.sharer { background-color: #fff; box-shadow: 1px 3px 3px rgba(0,0,0,0.3); font-size: 19px; color: #3C4953; }
+
+/* contact */
+.contact-block .contact-title { color: #3C4953; }
+
+/* search */
+#you-searched .input-group { border: 1px solid #3C4953; }
+
+/* panel */
+.panel-rates-alt { border-color: #53284F; background-color: #4d7b67; color: #fff; box-shadow: none; border-radius: 0; }
+
+/* ------------------------------------------------------------
+	xx: Rates
+------------------------------------------------------------ */
+
+.rates-by-type .rate-type .rate-type-icon { border: 5px solid #53284F; color: #4c7a67; }
+
+/* ------------------------------------------------------------
+	xx: Tick List
+------------------------------------------------------------ */
+
+.tick-list li { padding-left: 40px; background-image: url('../images/icons/tick.png'); }
+
+/* ------------------------------------------------------------
+	xx: Cookie Notice
+------------------------------------------------------------ */
+
+.cookie-message { background-color: #7C5CC1; }
+
+/* ------------------------------------------------------------
+	xx: Footer Links
+------------------------------------------------------------ */
+
+#footer-links {}
+#footer-links a {}
+#footer-links a:hover { color: #3C4953; }
+
+/* ------------------------------------------------------------
+	xx: Quick Quote
+------------------------------------------------------------ */
+
+.quick-quote-toggler,
+.quick-quote-toggler .quick-quote-text,
+.quick-quote-toggler .fa { color: #3C4953; }
+
+.ii-notice:before { background: linear-gradient(135deg, #00F0F0 0%, #FF78FF 100%); }
+
+
+
+#stock-top .stock-title {color: #3C4953;}
+#stock-data .stock-current {color: #3C4953;}
+#stock-chart-btns .btn:hover, #stock-chart-btns .btn:focus, #stock-chart-btns .btn.active {background-color: #7C5CC1;}
+
+#risk-top .risk-title {color: #3C4953;}
+
+.info-block {background-color: #7C5CC1;}
+
+.caret-list li:before {color: #7C5CC1;}
+
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover {background-color: #7C5CC1; border-color: #7C5CC1;}
+
+#nv-all {background-color: #7C5CC1;}
+
+#subscribe-box {background-color: #7C5CC1;}
+
+#market-riser-fallers .market-links li:hover, #market-riser-fallers .market-links li.current {background: #7C5CC1; border-right-color: #7C5CC1;}
+#market-riser-fallers .market-links li {border:1px solid #7C5CC1;}
+
+#market-chart-btns .btn:hover, #market-chart-btns .btn:focus, #market-chart-btns .btn.active {background-color: #7C5CC1;}
+#market-data .market-current {color: #3C4953;}
+
+#market-listed-wrap .market-listed-title {color: #3C4953;}
+
+.search #main-top .main-title{color: #3C4953;}
+.taxonomy-navs .taxonomy .term:hover, .taxonomy-navs .taxonomy .term.current {background-color: #7C5CC1;}
+.search-block-data .stock-current.stock-increase {color: #3C4953;}
+
+#fund-top .fund-title {color: #3C4953;}
+#fund-data .fund-current {color: #3C4953;}
+
+/* ------------------------------------------------------------
+	xx: Alerts/Notifications
+------------------------------------------------------------ */
+.alert-info {background-color: #0074E0; border-color: #0074E0; color: #fff;}
+.alert-info-dark {background-color: #3C4953; border-color: #3C4953; color: #fff;} 
+.alert-success {background-color: #38A841; border-color: #38A841; color: #fff;}
+.alert-danger {background-color: #F15978; border-color: #F15978; color: #fff;}
+.alert-warning {background-color: #FFB31F; border-color: #FFB31F; color: #fff;}
+
+.modal-header .close {color:#7c5cc1;}
+.widget-default, #sidebar {background-color: #9DA4A9;}
+#footer-blocks {background-color:#F5F6F6; border-top: 2px solid #CED1D4}
+
+.btn-green {color: #fff; background-color: #0074E0; border-color: #0074E0; box-shadow: none; -webkit-box-shadow: none;}
+.btn-green:hover {background-color:  #148EFF; color: #FFF; box-shadow: none;}
+.btn-green:active {background-color:  #0054A3; color: #FFF; box-shadow: none;}
+.btn-orange {box-shadow: none; -webkit-box-shadow: none;}
+.btn-orange:hover {background-color:  #9A81CF;  box-shadow: none;}
+.btn-orange:active {background-color:  #5d3ea2; box-shadow: none;}
+
+/* ------------------------------------------------------------
+	xx: Font
+------------------------------------------------------------ */
+.megamenu h3 {font-family: "Source Sans Pro", sans-serif;}
+#hero h1 {font-family: "Source Sans Pro", sans-serif;}
+#hero .btn {font-family: "Source Sans Pro", sans-serif;}
+#hero-news .hero-title {font-family: "Source Sans Pro", sans-serif;}
+#hero-news .hero-subtitle {font-family: "Source Sans Pro", sans-serif;}
+.breadcrumbs .breadcrumb li a {font-family: "Source Sans Pro", sans-serif;}
+#main .main-title {font-family: "Source Sans Pro", sans-serif;}
+#main-top .main-title {font-family: "Source Sans Pro", sans-serif;}
+#main-top .tick-list li {font-family: "Source Sans Pro", sans-serif;}
+#main-top-alt .main-title {font-family: "Source Sans Pro", sans-serif;}
+#main-content .main-content-block .main-content-title-large {font-family: "Source Sans Pro", sans-serif;}
+#main-bottom .main-content-block .main-content-title-large {font-family: "Source Sans Pro", sans-serif;}
+#how-to-help .helper-title {font-family: "Source Sans Pro", sans-serif;}
+#front-widgets .front-widget .front-widget-title {font-family: "Source Sans Pro", sans-serif;}
+.fund-articles .fund-article .fund-article-title {font-family: "Source Sans Pro", sans-serif;}
+.contact-block .contact-title {font-family: "Source Sans Pro", sans-serif;}
+.help-center-block .help-center-title {font-family: "Source Sans Pro", sans-serif;}
+#stock-top .stock-title {font-family: "Source Sans Pro", sans-serif;}
+#stock-data .stock-current {font-family: "Source Sans Pro", sans-serif;}
+#fund-top .fund-title {font-family: "Source Sans Pro", sans-serif;}
+#fund-data .fund-current {font-family: "Source Sans Pro", sans-serif;}
+#market-top .market-title {font-family: "Source Sans Pro", sans-serif;}
+#market-data .market-current {font-family: "Source Sans Pro", sans-serif;}
+#risk-top .risk-title {font-family: "Source Sans Pro", sans-serif;}
+#error-blocks .error-block .error-block-title {font-family: "Source Sans Pro", sans-serif;}
+#investment-news .investment-news-article .investment-news-article-overlay .investment-news-article-title {font-family: "Source Sans Pro", sans-serif;}
+#latest-market-news .latest-market-news-wrap .latest-market-news-overlay .latest-market-news-content .latest-market-news-title {font-family: "Source Sans Pro", sans-serif;}
+.screen-title {font-family: "Source Sans Pro", sans-serif;}
+.speedometer .whatdafook {font-family: "Source Sans Pro", sans-serif;}
+.lead-article .lead-article-title-wrap .lead-article-title {font-family: "Source Sans Pro", sans-serif;}
+#articles-wrap .article .article-image .article-overlay .article-title {font-family: "Source Sans Pro", sans-serif;}
+#article-top-wrap .article-top .article-title-wrap .article-title {font-family: "Source Sans Pro", sans-serif;}
+#article-promo .article-promo-title {font-family: "Source Sans Pro", sans-serif;}
+#subscribe-box .subscribe-box-content h4 {font-family: "Source Sans Pro", sans-serif;}
+.ii-views .article-title {font-family: "Source Sans Pro", sans-serif;}
+.search-block-title-wrap .search-block-title {font-family: "Source Sans Pro", sans-serif;}
+.search-block-data .stock-current {font-family: "Source Sans Pro", sans-serif;}
+.search-block-data .fund-current {font-family: "Source Sans Pro", sans-serif;}
+.search-block-data .market-current {font-family: "Source Sans Pro", sans-serif;}
+.search-block-news .search-block-news-title {font-family: "Source Sans Pro", sans-serif;}
+
+
+.shaded	{background-color: #F5F6F6;}
+.bordered {border-color:#E2E4E5;}
+.btn-green:focus {color: #FFF;}
+.btn-orange:focus {color: #FFF;}
+.btn-white-alt {color:  #0074E0; border-color: #0074E0;}
+.btn-white-alt:hover, .btn-white-alt:active	{color: #3C4953; border-color: #3C4953;box-shadow: none;}
+.btn-white-alt:focus {color: #3C4953; border-color: #3C4953;}
+.btn-white {color: #0074E0;}
+.btn-white:hover {color: #3C4953; background-color: #f5f6f6; box-shadow: 0px 2px 6px rgba(60,73,83,0.15);}
+.widget-alt	{background-color: #6d777e;}
+.widget-default	{background-color: #9DA4A9;}
+#sidebar {background-color: #FFFFFF;}
+#footer	{background-color: #F5F6F6;}
+#main-top:before {background-color: rgba(60,73,83,0.4);}
+#sidebar:before {background-color: #9DA4A9;}
+#header-bottom {background-color: #f5f6f6;}
+.stock-disclaimer {background-color: #f5f6f6;}
+.info-block	{background-color: #0074E0;}
+#top-search .input-group:before {background-color: #CED1D4;}
+#top-search .input-group:after {background-color: #CED1D4;}
+#header-top {box-shadow: 0px 0px 5px 2px rgba(60,73,83,0.15);}
+.lead-article .lead-article-title-wrap .lead-article-title {background-color: #3C4953;}
+.news-risk {background-color: #E2E4E5;}
+#articles-wrap .article .article-image .article-overlay {background-color: rgba(60,73,83,0.75);}
+.ui-widget.ui-widget-content {border: 1px solid #CED1D4;}
+.ui-widget {font-family: source sans pro,sans-serif;}
+.ui-widget select {font-family: source sans pro,sans-serif;}
+.ui-widget-header {color: #3C4953; background: #E2E4E5;}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default, .ui-button, html .ui-button.ui-state-disabled:hover, html .ui-button.ui-state-disabled:active {background: #CED1D4;}
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {background: #0074E0;}
+.ui-state-hover, .ui-widget-content .ui-state-hover	{background: #9DA4A9;}
+#risk-alert .alert.alert-warning	{background-color:  #feebce; border-color: #feebce; color: #3C4953;}
+.menu ul li a {color: #3C4953;}
+.menu ul li a:hover {color: #0074E0;}
+.pagination > .active > a, .pagination > .active > a:focus, .pagination > .active > a:hover, .pagination > .active > span, .pagination > .active > span:focus, .pagination > .active > span:hover, .ii-views .pagination > .active > a, .ii-views .pagination > .active > a:focus, .ii-views .pagination > .active > a:hover, .ii-views .pagination > .active > span, .ii-views .pagination > .active > span:focus, .ii-views .pagination > .active > span:hover {background-color: #0074E0; border-color: #0074E0;}
+.pagination > li > a, .pagination > li > span {color: #9DA4A9; border-color: #E2E4E5;}
+.pagination > li > a:focus, .pagination > li > a:hover, .pagination > li > span:focus, .pagination > li > span:hover {color: #3C4953; background-color: #fff; border-color: #E2E4E5;}
+
+
+
+a {color: #0074E0;}
+a:focus, a:hover {color: #3C4953;}
+.panel-basic {box-shadow: 0px 1px 15px rgba(60,73,83,0.18);}
+.menu > li > a {color: #3C4953;}
+.menu > li > a:hover {color: #0074E0;}
+.megamenu {box-shadow: inset 0 20px 20px -20px rgba(60,73,83,0.18);}
+
+.quote blockquote {font-size: 30px; line-height: 36px; font-style: normal; color: #3C4953;} 
+.quote blockquote:before {color: #E2E4E5; margin-right: 8px; font-size: 40px;} 
+.quote blockquote .quote-text:after {color: #E2E4E5; font-size: 40px;}
+.alert-info a {color: #fff;}
+
+.panel-light > .panel-heading {background-color: #F5F6F6; border: 1px solid #E2E4E5;}
+.panel-title>.small>a:hover, .panel-title>a:hover, .panel-title>small>a:hover, .panel-title>.small>a:focus, .panel-title>a:focus, .panel-title>small>a:focus {
+color: inherit;}
+
+#market-chart-btns .btn {border-color: #7859bc;}
+
+
+/*---- Risers ----*/ 
+.glyphicon-arrow-up {color:#005CB3;}
+#market-data .market-increase {color:#005CB3;}
+.market-stock .stock-gain-up, .market-stock .stock-gain-up .glyphicon {color: #005CB3; font-weight: bold;}
+#stock-data .stock-increase {color:#005CB3;}
+.search-block-data .stock-current.stock-increase { color: #005CB3; }
+.search-block-data .stock-change.stock-increase { color: #005CB3; }
+#fund-data .fund-increase { color: #005CB3; }
+.search-block-data .market-current.market-increase { color: #005CB3; }
+.search-block-data .market-change.market-increase { color: #005CB3; }
+
+
+/*---- Fallers ---*/
+.glyphicon-arrow-down {color:#C04760;}
+#market-data .market-decrease {color:#C04760;}
+.market-stock .stock-gain-down, .market-stock .stock-gain-down .glyphicon {color: #C04760; font-weight: bold;}
+#stock-data .stock-decrease{color:#C04760;}
+.search-block-data .stock-current.stock-decrease{color:#C04760;}
+.search-block-data .stock-change.stock-decrease { color: #C04760; }
+.search-block-data .market-current.market-decrease { color: #C04760; }
+.search-block-data .market-change.market-decrease { color: #C04760; }
+#fund-data .fund-decrease { color: #C04760; }
+
+/*----- 31/10/2017 ----*/
+.number-list li:before{background-color: #7a5dc3;}
+.bullet-list li {background-image: url('../images/bullet-alt.png');}
+
+/*------20/11/2017 ----*/
+#market-risers .market-stock .btn-green {background-color:#2C8634; border-color:#2C8634;}
+#market-risers .market-stock .btn-green:hover {background-color:#569E5C; border-color:#569E5C;}
+#market-risers .market-stock .btn-green:active {background-color:#236B29; border-color:#236B29;}
+
+#market-fallers .market-stock .btn-green {background-color:#2C8634; border-color:#2C8634;}
+#market-fallers .market-stock .btn-green:hover {background-color:#569E5C; border-color:#569E5C;}
+#market-fallers .market-stock .btn-green:active {background-color:#236B29; border-color:#236B29;}
+
+#market-listed .btn-orange  {background-color:#2C8634; border-color:#2C8634;}
+#market-listed .btn-orange:hover {background-color:#569E5C; border-color:#569E5C;}
+#market-listed .btn-orange:active {background-color:#236B29; border-color:#236B29;}
+
+.inv-button {background-color:#2C8634; border-color:#2C8634;}
+.inv-button:hover {background-color:#569E5C; border-color:#569E5C;}
+.inv-button:active {background-color:#236B29; border-color:#236B29;}
+
+.inv-table .btn-orange{background-color:#2C8634; border-color:#2C8634;}
+.inv-table .btn-orange:hover {background-color:#569E5C; border-color:#569E5C;}
+.inv-table .btn-orange:active {background-color:#236B29; border-color:#236B29;}
+
+.btn-dark-green {background-color:#2C8634; border-color:#2C8634; color:#fff;}
+.btn-dark-green:hover {background-color:#569E5C; border-color:#569E5C; color:#fff;}
+.btn-dark-green:active {background-color:#236B29; border-color:#236B29; color:#fff;}
+
+#stock-top #stock-data .stock-buttons .btn-orange{background-color:#2C8634; border-color:#2C8634; color:#fff;}
+#stock-top #stock-data .stock-buttons .btn-orange:hover {background-color:#569E5C; border-color:#569E5C; color:#fff;}
+#stock-top #stock-data .stock-buttons .btn-orange:active {background-color:#236B29; border-color:#236B29; color:#fff;}
+
+.stock-buttons .stock-buy{background-color:#2C8634; border-color:#2C8634; color:#fff;}
+.stock-buttons .stock-buy:hover {background-color:#569E5C; border-color:#569E5C; color:#fff;}
+.stock-buttons .stock-buy:active {background-color:#236B29; border-color:#236B29; color:#fff;}
+
+.qsf-invest .btn-orange{background-color:#2C8634; border-color:#2C8634; color:#fff;}
+.qsf-invest .btn-orange:hover {background-color:#569E5C; border-color:#569E5C; color:#fff;}
+.qsf-invest .btn-orange:active {background-color:#236B29; border-color:#236B29; color:#fff;}
+
+#fund-top #fund-data .fund-buttons .btn-orange{background-color:#2C8634; border-color:#2C8634; color:#fff;}
+#fund-top #fund-data .fund-buttons .btn-orange:hover {background-color:#569E5C; border-color:#569E5C; color:#fff;}
+#fund-top #fund-data .fund-buttons .btn-orange:active {background-color:#236B29; border-color:#236B29; color:#fff;}
+
+#search-funds .search-single #fund-search-chart #fund-search-data .btn-orange{background-color:#2C8634; border-color:#2C8634; color:#fff;}
+#search-funds .search-single #fund-search-chart #fund-search-data .btn-orange:hover {background-color:#569E5C; border-color:#569E5C; color:#fff;}
+#search-funds .search-single #fund-search-chart #fund-search-data .btn-orange:active {background-color:#236B29; border-color:#236B29; color:#fff;}
+
+#search-stocks .search-single #stock-search-graph #stock-search-data .btn-orange{background-color:#2C8634; border-color:#2C8634; color:#fff;}
+#search-stocks .search-single #stock-search-graph #stock-search-data .btn-orange:hover {background-color:#569E5C; border-color:#569E5C; color:#fff;}
+#search-stocks .search-single #stock-search-graph #stock-search-data .btn-orange:active {background-color:#236B29; border-color:#236B29; color:#fff;}
+
+#fund-basket .selected-investment-list .btn-orange{background-color:#2C8634; border-color:#2C8634; color:#fff;}
+#fund-basket .selected-investment-list .btn-orange:hover {background-color:#569E5C; border-color:#569E5C; color:#fff;}
+#fund-basket .selected-investment-list .btn-orange:active {background-color:#236B29; border-color:#236B29; color:#fff;}

@@ -1,0 +1,31 @@
+form:
+  tabs:
+    - name: tabMain
+      label: Main
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+          description: Enter the main title, this is the page H1
+        - name: subtitle
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Subtitle
+          description: Enter subtitle, not really a subtitle, this outputs in brackets within the title as a span              
+        - name: text
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Text
+          description: Enter the available paragraph of text
+          tables: true
+        - name: chartID
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Chart ID
+          description: Enter the id (no hash#) of the chart to display
+        - name: chartHeight
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Chart Height
+          description: Enter the height of the chart (integer no px)
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

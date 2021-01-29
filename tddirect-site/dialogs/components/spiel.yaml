@@ -1,0 +1,16 @@
+form:
+  tabs:
+    - name: tabGeneral
+      label: General
+      fields:    
+        - name: text
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Text
+          description: Enter the required text into the editor
+          alignment: true
+          tables: true
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

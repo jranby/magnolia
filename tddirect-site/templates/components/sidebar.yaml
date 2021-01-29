@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/sidebar.ftl
+renderType: site
+dialog: tddirect-site:components/sidebar
+description: Sidebar
+title: Sidebar

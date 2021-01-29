@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/tabs.ftl
+renderType: site
+dialog: tddirect-site:components/tabs
+description: Tabs
+title: Tabs

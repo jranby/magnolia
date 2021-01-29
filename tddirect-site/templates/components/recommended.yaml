@@ -1,0 +1,4 @@
+templateScript: /tddirect-site/templates/components/recommended.ftl
+renderType: site
+description: Recommended funds panel
+title: Recommended

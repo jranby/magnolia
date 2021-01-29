@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/list.ftl
+renderType: site
+dialog: tddirect-site:components/list
+description: List
+title: List

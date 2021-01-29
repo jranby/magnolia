@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/pages/proxy.ftl
+renderType: site
+visible: true
+title: Proxy
+dialog: tddirect-site:pages/proxy

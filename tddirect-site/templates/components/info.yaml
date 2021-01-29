@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/info.ftl
+renderType: site
+dialog: tddirect-site:components/info
+description: Info panel
+title: Info Block

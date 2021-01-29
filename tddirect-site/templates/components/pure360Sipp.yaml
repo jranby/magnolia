@@ -1,0 +1,4 @@
+templateScript: /tddirect-site/templates/components/pure360Sipp.ftl
+renderType: site
+description: Pure360 SIPP form embed component.
+title: Pure360 SIPP Prospect

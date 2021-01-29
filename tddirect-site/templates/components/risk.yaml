@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/risk.ftl
+renderType: site
+dialog: tddirect-site:components/risk
+description: Risk
+title: Risk

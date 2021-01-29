@@ -1,0 +1,119 @@
+form:
+  tabs:
+    - name: tabGeneral
+      label: General
+      fields:
+        - name: bootstrapColumns
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Bootstrap Columns
+          description: Choose Bootstrap column CSS class, default is col-md-4
+          sortOptions: false
+          required: true
+          options:
+            - name: col-md-3
+              value: col-md-3
+              label: col-md-3
+            - name: col-md-4
+              value: col-md-4
+              label: col-md-4
+              selected: true
+            - name: col-md-6
+              value: col-md-6
+              label: col-md-6
+            - name: col-md-12
+              value: col-md-12
+              label: col-md-12        
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+          description: Enter the title
+          required: true
+        - name: date
+          class: info.magnolia.ui.form.field.definition.DateFieldDefinition
+          label: Date
+          time: false
+          dateFormat: dd-MM-yyyy
+          description: Enter the date to display
+          required: true
+        - name: buttonInternalLink
+          identifierToPathConverter:
+            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          label: Button Internal Link
+          description: Choose button as internal page link
+          targetWorkspace: website
+          appName: pages
+        - name: buttonExternalLink
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Button External Link
+          description: Choose button as external link
+        - name: category
+          class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+          label: Category
+          description: Choose a news category to define against this article
+          sortOptions: true
+          required: false
+          options:
+            - name: none
+              value: none
+              label: ''
+            - name: market-news
+              value: Market News
+              label: Market News
+            - name: investor-ideas
+              value: Investment Ideas
+              label: Investment Ideas
+            - name: investor-research
+              value: Investor Research
+              label: Investor Research
+            - name: fund-news
+              value: Fund News
+              label: Fund News
+            - name: the-week-ahead
+              value: The Week Ahead
+              label: The Week Ahead
+            - name: uk-market-news
+              value: UK Market News
+              label: UK Market News
+            - name: us-market-news
+              value: US Market News
+              label: US Market News
+            - name: global-market-news
+              value: Global Market News
+              label: Global Market News
+            - name: london-pre-market-open
+              value: London Pre-Market Open
+              label: London Pre-Market Open
+            - name: london-market-open
+              value: London Market Open
+              label: London Market Open
+            - name: broker-ratings-summary
+              value: Broker Ratings Summary
+              label: Broker Ratings Summary
+            - name: winners-losers-summary
+              value: Winners & Losers Summary
+              label: Winners & Losers Summary
+            - name: london-market-midday
+              value: London Market Midday
+              label: London Market Midday
+            - name: london-market-close
+              value: London Market Close
+              label: London Market Close
+            - name: london-briefing
+              value: London Briefing
+              label: London Briefing
+        - name: image
+          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+          targetWorkspace: dam
+          appName: assets
+          label: Image
+          required: true
+          identifierToPathConverter:
+            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+          contentPreviewDefinition:
+            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

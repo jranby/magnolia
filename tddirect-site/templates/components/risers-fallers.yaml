@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/risers-fallers.ftl
+renderType: site
+dialog: tddirect-site:components/risers-fallers
+description: Risers and Fallers component
+title: Risers and Fallers

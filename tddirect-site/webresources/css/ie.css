@@ -1,0 +1,24 @@
+/* ------------------------------------------------------------
+
+    * IE CSS
+    * Stylesheet specifically targetting IE
+    * TD Direct Investing
+    * https://www.tddirectinvesting.co.uk
+    * Version: 1.0
+
+/* ------------------------------------------------------------
+	
+	Table of Contents:
+	
+	01 - Top Search
+	02 - 
+
+/* ------------------------------------------------------------
+
+/* ------------------------------------------------------------
+	01: Top Search
+------------------------------------------------------------ */
+
+#top-search .input-group:before { top: -11px; bottom: -11px; }
+#top-search .input-group:after { top: -11px; bottom: -11px; }
+

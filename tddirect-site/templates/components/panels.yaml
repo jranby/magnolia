@@ -1,0 +1,11 @@
+templateScript: /tddirect-site/templates/components/panels.ftl
+renderType: site
+dialog: tddirect-site:components/panels
+description: Panels
+title: Panels
+
+# decorate or extend parameters when needed
+#parameters:
+  #divClass: my-component-divz
+  #imageWrapperClass: my-wrapperz
+  #imgClass: my-image foobarImage

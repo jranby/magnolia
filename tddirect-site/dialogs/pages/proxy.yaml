@@ -1,0 +1,22 @@
+form:
+  tabs:
+    - name: tabMain
+      label: Main
+      fields:
+        - name: html
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: HTML
+          description: Enter the required html into the editor
+          rows: 20
+        - name: hideFromSearch
+          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+          label: Hide From Search?
+          description: Check for this page to be hidden from search results as they display by default.
+          buttonLabel: ""
+          defaultValue: false          
+
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

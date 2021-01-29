@@ -1,0 +1,146 @@
+/* ------------------------------------------------------------
+	xx: Computershare
+------------------------------------------------------------ */
+
+body { padding-top: 64px; background-image: url('../images/bg/bg-stripe.jpg'); background-repeat: repeat; color: #363636; }
+
+@media (min-width: 1200px)
+{
+	body { padding-top: 106px; }	
+}
+
+/* table */
+.table-alt thead { background-color: #752864; }
+
+/* breadcrumb */
+.breadcrumbs .breadcrumb li.active { color: #9d7fa0; }
+
+/* btn */
+.btn { color: #53284F; }
+.btn-white-alt { background-color: #fff; color: #2e2e2e; border: 1px solid #53284F; }
+.btn-orange { background-color: #752864; color: #fff; }
+.btn-green { background-color: #eceded; color: #000; border: 1px solid #53284F; }
+
+/* panels */
+.panel-default > .panel-heading { background-color: #9a5183; }
+
+
+/* logo */
+.logo { display: inline-block; }
+
+/* menu */
+.menu > li > a:hover,
+.menu > li.current > a { color: #752864; }
+
+/* login link */
+#menu-login { background-color: #752864; }
+
+/* children a */
+.menu ul li a { color: #363636; }
+.menu ul li:hover a,
+.menu ul li.current a { color: #752864; }
+
+/* megamenu */
+.megamenu h3 { color: #3e0041; }
+
+/* main */
+#main .main-title { color: #53284F; }
+#main-top .main-title { color: #53284F; }
+#main-search .input-group { border: 1px solid #53284F; }
+#main-content .main-block-title { color: #53284F; }
+#main-content .main-content-block .main-content-title-large { color: #53284F; }
+#main-content .main-content-block .main-content-inner-title { color: #53284F; }
+
+@media (min-width: 768px)
+{
+	#main-top .main-title { color: #53284F; }
+}
+
+/* hero */
+#hero h1 { color: #53284f; text-shadow: none; }
+#hero p.lead { color: #53284f; text-shadow: none; }
+#hero p.rear { color: #53284f; text-shadow: none; }
+#hero ul {}
+#hero ul li {}
+#hero ul li:last-child { color: #53284f; text-shadow: none; }
+
+/* sidebar */
+#sidebar { background-color: #9a5183; color: #fff; }
+
+/* widget */
+.widget-alt { background-color: #53284F; color: #fff; }
+.widget-alt:before { background-color: #53284F; }
+.widget-links li a { color: #53284F; }
+
+/* helper blocks */
+#how-to-help .helper-title { color: #53284F; }
+#helper-blocks .helper-block .helper-block-title a,
+quick-quote-toggler .quick-quote-text,
+#market-top .market-title, #investment-disclaimer p:after { color: #53284F; }
+
+/* toggler */
+.toggler { color: #53284F; }
+
+/* section */
+#section-choices { background-color: #53284F; }
+#section-choices .choices .choice:hover:after,
+#section-choices .choices .choice.current:after { border-top: 12px solid #53284F; }
+#section-choices-alt { background-color: #53284F;  }
+#section-choices-alt .choices .choice:hover:after,
+#section-choices-alt .choices .choice.current:after { border-top: 12px solid #53284F; }
+
+/* fund */
+.fund-articles .fund-article .fund-article-title { color: #53284F; }
+.fund-articles .fund-article .read-more { color: #53284F; }
+
+/* news */
+.news-articles .news-article .news-article-title { color: #53284F; }
+.news-articles .news-article .news-article-date { color: #53284F; }
+.news-articles .news-article .read-more { float: right; color: #53284F; }
+.news-article .article-meta .article-category { color: #53284F; }
+
+/* sharer */
+.sharer { background-color: #fff; box-shadow: 1px 3px 3px rgba(0,0,0,0.3); font-size: 19px; color: #53284F; }
+
+/* contact */
+.contact-block .contact-title { color: #53284F; }
+
+/* search */
+#you-searched .input-group { border: 1px solid #53284F; }
+
+/* panel */
+.panel-rates-alt { border-color: #53284F; background-color: #4d7b67; color: #fff; box-shadow: none; border-radius: 0; }
+
+/* ------------------------------------------------------------
+	xx: Rates
+------------------------------------------------------------ */
+
+.rates-by-type .rate-type .rate-type-icon { border: 5px solid #53284F; color: #4c7a67; }
+
+/* ------------------------------------------------------------
+	xx: Tick List
+------------------------------------------------------------ */
+
+.tick-list li { padding-left: 40px; background-image: url('../images/icons/tick-cs.png'); }
+
+/* ------------------------------------------------------------
+	xx: Cookie Notice
+------------------------------------------------------------ */
+
+.cookie-message { background-color: #752864; }
+
+/* ------------------------------------------------------------
+	xx: Footer Links
+------------------------------------------------------------ */
+
+#footer-links {}
+#footer-links a {}
+#footer-links a:hover { color: #53284f; }
+
+/* ------------------------------------------------------------
+	xx: Quick Quote
+------------------------------------------------------------ */
+
+.quick-quote-toggler,
+.quick-quote-toggler .quick-quote-text,
+.quick-quote-toggler .fa { color: #53284F; }

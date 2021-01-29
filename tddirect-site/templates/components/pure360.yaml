@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/pure360.ftl
+renderType: site
+dialog: tddirect-site:components/pure360
+description: Pure360 form embed component.
+title: Pure360

@@ -1,0 +1,88 @@
+templateScript: /tddirect-site/templates/pages/article.ftl
+renderType: site
+visible: true
+title: News Article
+dialog: tddirect-site:pages/article
+modelClass: td.apps.news.template.ArticlesTemplate
+areas:
+  head:
+    templateScript: /tddirect-site/templates/components/head-news.ftl
+    type: noComponent
+  header:
+    templateScript: /tddirect-site/templates/components/header.ftl
+    type: noComponent
+    areas:
+      navigation:
+        templateScript: /tddirect-site/templates/components/navigation.ftl
+        type: noComponent        
+      mobile-menu:
+        templateScript: /tddirect-site/templates/components/mobile-menu.ftl
+        type: noComponent        
+  footer:
+    templateScript: /tddirect-site/templates/components/footer.ftl
+    type: noComponent
+    inheritance:
+     enabled: true
+     components: all
+    areas:
+      help:
+        templateScript: /tddirect-site/templates/components/help.ftl
+        type: noComponent
+      webchat:
+        templateScript: /tddirect-site/templates/components/webchat.ftl
+        type: noComponent
+      connect:
+        templateScript: /tddirect-site/templates/components/connect.ftl
+        type: noComponent
+  sharer:
+    templateScript: /tddirect-site/templates/components/sharer.ftl
+    type: noComponent
+  analytics:
+    templateScript: /tddirect-site/templates/components/analytics.ftl
+    type: noComponent
+  cookie:
+    templateScript: /tddirect-site/templates/components/cookie.ftl
+    type: noComponent
+  ii-notice:
+    templateScript: /tddirect-site/templates/components/ii-notice.ftl
+    type: noComponent
+  main-top:
+    renderType: site
+    maxComponents: 1
+    editable: true
+    availableComponents:
+      main-top:
+        id: tddirect-site:components/main-top
+      main-top-alt:
+        id: tddirect-site:components/main-top-alt
+    inheritance:
+      enabled: false
+      components: all
+  main-content:
+     renderType: site
+     availableComponents:
+      main:
+        id: tddirect-site:components/main
+      panels:
+        id: tddirect-site:components/panels
+      accordion:
+        id: tddirect-site:components/accordion 
+      tabs:
+        id: tddirect-site:components/tabs
+      chart:
+        id: tddirect-site:components/chart        
+      jisa-calculator:
+        id: tddirect-site:components/jisa-calculator
+      risers-fallers:
+        id: tddirect-site:components/risers-fallers
+      best-buys:
+        id: tddirect-site:components/best-buys
+      quote:
+        id: tddirect-site:components/quote
+  sidebar:
+     renderType: site
+     availableComponents:
+      sidebar:
+        id: tddirect-site:components/sidebar
+      pure360:
+        id: tddirect-site:components/pure360        

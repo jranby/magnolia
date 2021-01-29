@@ -1,0 +1,37 @@
+form:
+  tabs:
+    - name: tabMain
+      label: Main
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+        - name: hideFromSearch
+          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+          label: Hide From Search?
+          description: Check for this page to be hidden from search results as they display by default.
+          buttonLabel: ""
+          defaultValue: false          
+    - name: tabMetaBase
+      label: Meta
+      fields:
+        - name: metaTitle
+          label: Meta Title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true        
+        - name: keywords
+          label: Keywords
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+          rows: 3
+        - name: description
+          label: Description
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          i18n: true
+          rows: 5        
+
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

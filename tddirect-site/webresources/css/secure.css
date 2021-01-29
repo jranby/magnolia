@@ -1,0 +1,4 @@
+body { background-image: none; }
+#main { margin-top: -68px; width:100%; }
+#iframe-secure { margin: 20px 0; }
+.secure-iframe-container { max-width: 1048px; margin: 0 auto; }

@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/notice.ftl
+renderType: site
+dialog: tddirect-site:components/notice
+description: Notice
+title: Notice

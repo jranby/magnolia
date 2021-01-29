@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/logout-top.ftl
+renderType: site
+dialog: tddirect-site:components/logout-top
+description: Logout Top
+title: Logout Top

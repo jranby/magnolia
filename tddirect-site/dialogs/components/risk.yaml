@@ -1,0 +1,106 @@
+form:
+  tabs:
+    - name: tabGeneral
+      label: General
+      fields:
+        - name: text
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Text
+          description: Enter the available paragraph of text for the top section
+          lists: false
+          height: 200
+        - name: disclaimer
+          class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+          label: Disclaimer
+          description: Enter the available paragraph of text for the bottom disclaimer
+          lists: false
+          height: 200
+        - name: countrySelect
+          class: info.magnolia.ui.form.field.definition.CheckboxFieldDefinition
+          label: Display Country Selector?
+          description: Check for this page to display a country selector for conditional display of the apply button, this selector is hidden by default.
+          buttonLabel: ""
+          defaultValue: false
+    - name: tabButton
+      label: Button
+      fields:
+        - name: button
+          class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+          transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+          label: Button
+          layout: vertical
+          fields:
+            - name: buttonTitle
+              class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              label: ""
+            - name: buttonLink
+              class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+              transformerClass: info.magnolia.ui.form.field.transformer.composite.SwitchableTransformer
+              label: ""
+              options:
+                - name: linkInternal
+                  label: Link Internal
+                  selected: true
+                  value: linkInternal
+                - name: linkExternal
+                  label: Link External
+                  value: linkExternal
+              fields:
+                - name: linkInternal
+                  identifierToPathConverter:
+                    class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+                  class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                  label: ""
+                  targetWorkspace: website
+                  appName: pages
+                - name: linkExternal
+                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                  label: ""
+                  rows: 1       
+    - name: tabLeftRiskBlocks
+      label: Left Blocks
+      fields:
+        - name: leftRiskBlocks
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Blocks
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            layout: vertical
+            fields:
+              - name: title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: ""
+              - name: text
+                class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+                label: ""
+                lists: false
+                height: 200
+    - name: tabRightRiskBlocks
+      label: Right Blocks
+      fields:
+        - name: rightRiskBlocks
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Blocks
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            layout: vertical
+            fields:
+              - name: title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: ""
+              - name: text
+                class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+                label: ""
+                lists: false
+                height: 200                
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition

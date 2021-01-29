@@ -1,0 +1,4 @@
+templateScript: /tddirect-site/templates/components/jisa-calculator.ftl
+renderType: site
+description: JISA Calculator
+title: JISA Calculator

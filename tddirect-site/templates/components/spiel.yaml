@@ -1,0 +1,5 @@
+templateScript: /tddirect-site/templates/components/spiel.ftl
+renderType: site
+dialog: tddirect-site:components/spiel
+description: Spiel Component
+title: Spiel

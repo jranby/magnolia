@@ -1,0 +1,78 @@
+form:
+  tabs:
+    - name: tabText
+      label: Text
+      fields:
+        - name: title
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Title
+          description: Enter the main title, this is the page H1
+        - name: subtitle
+          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+          label: Subtitle
+          description: Enter subtitle, not really a subtitle, this outputs the line under the main title         
+    - name: tabBlocks
+      label: Blocks
+      fields:
+        - name: blocks
+          class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+          label: Blocks
+          transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueSubChildrenNodePropertiesTransformer
+          field:
+            name: compositeField
+            class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+            transformerClass: info.magnolia.ui.form.field.transformer.composite.NoOpCompositeTransformer
+            layout: vertical
+            fields:
+              - name: title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Title
+              - name: text
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Text
+                rows: 3
+              - name: linkType
+                class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+                label: Link Type
+                options:
+                - name: white
+                  value: white
+                  label: White
+                - name: white-alt
+                  value: white-alt
+                  label: White Alt
+                - name: orange
+                  value: orange
+                  label: Orange
+                - name: green
+                  value: green
+                  label: Green
+                - name: dark-green
+                  value: dark-green
+                  label: Dark Green
+              - name: link
+                identifierToPathConverter:
+                  class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                label: Choose Link
+                description: Choose link
+                targetWorkspace: website
+                appName: pages
+              - name: linkText
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                label: Link Text
+                description: Enter the link text
+              - name: bgIcon
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: dam
+                appName: assets
+                label: Background Icon
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent                
+actions:
+  commit:
+    class: info.magnolia.ui.admincentral.dialog.action.SaveDialogActionDefinition
+  cancel:
+    class: info.magnolia.ui.admincentral.dialog.action.CancelDialogActionDefinition
