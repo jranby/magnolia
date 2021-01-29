@@ -1,0 +1,2 @@
+templateScript: /quick-start-funds/templates/components/dummy-component.ftl
+renderType: freemarker

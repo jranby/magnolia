@@ -1,0 +1,10 @@
+templateScript: /quick-start-funds/templates/pages/dummy-page.ftl
+renderType: freemarker
+visible: true
+dialog: quick-start-funds:pages/dummy-page-properties
+areas:
+  main:
+    renderType: freemarker
+    availableComponents:
+      dummy-component:
+        id: quick-start-funds:components/dummy-component

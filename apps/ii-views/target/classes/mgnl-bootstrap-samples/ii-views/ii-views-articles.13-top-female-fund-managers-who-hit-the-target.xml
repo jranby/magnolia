@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="13-top-female-fund-managers-who-hit-the-target" xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>mgnl:ii-views-article</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>ae7e8ced-adf6-4386-8ae1-06f6da35a290</sv:value>
+  </sv:property>
+  <sv:property sv:name="author" sv:type="String">
+    <sv:value>69130bbf-7058-4919-ac2e-6a1624740db4</sv:value>
+  </sv:property>
+  <sv:property sv:name="excerpt" sv:type="String">
+    <sv:value>Women are under-represented in fund management ranks globally, and there has been little improvement in the situation since the financial crisis.</sv:value>
+  </sv:property>
+  <sv:property sv:name="featured" sv:type="String">
+    <sv:value>jcr:5fb99ac5-9f4d-45ba-bfa5-423ea66bb186</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:createdBy" sv:type="String">
+    <sv:value>admin</sv:value>
+  </sv:property>
+  <sv:property sv:name="metaTitle" sv:type="String">
+    <sv:value>13-top-female-fund-managers-who-hit-the-target</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:created" sv:type="Date">
+    <sv:value>2017-06-01T15:37:34.444+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:createdBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+    <sv:value>2017-06-02T15:50:50.906+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:property sv:name="publishDate" sv:type="Date">
+    <sv:value>2017-05-31T00:00:00.000+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="robots" sv:type="String">
+    <sv:value>none</sv:value>
+  </sv:property>
+  <sv:property sv:name="title" sv:type="String">
+    <sv:value>13 top female fund managers who hit the target</sv:value>
+  </sv:property>
+  <sv:node sv:name="sections0">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>c521e43a-20c0-47ad-baf7-9311e5fb765f</sv:value>
+    </sv:property>
+    <sv:property sv:name="imageLink" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+    <sv:property sv:name="imageSrc" sv:type="String">
+      <sv:value>jcr:ce5f501d-7c7d-4a15-a3d0-6e86ef2f6294</sv:value>
+    </sv:property>
+    <sv:property sv:name="intro" sv:type="String">
+      <sv:value>Women are under-represented in fund management ranks globally, and there has been little improvement in the situation since the financial crisis.</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:createdBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2017-06-01T15:37:34.445+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2017-06-02T15:50:50.907+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="text" sv:type="String">
+      <sv:value>&lt;p&gt;Women are under-represented in fund management ranks globally, and there has been little improvement in the situation since the financial crisis. Just one in five funds has a female manager, a ratio largely unchanged since 2008, according to a Morningstar report on fund managers and gender published in November 2016.&lt;/p&gt;
+
+&lt;p&gt;However, its analysis of more than 26,000 funds across 56 countries - the most comprehensive study of its kind - found some regional bright spots, with women being better represented in smaller markets. Singapore has the highest proportion of female fund managers at 30%, followed by Portugal at 28%, Spain and Hong Kong at 26% and France at 21%.&lt;/p&gt;
+
+&lt;p&gt;However, countries with large financial centres, including Australia and New Zealand (11%), Canada (11%), the Netherlands (12%), the UK (13%) and Luxembourg (14%), are less gender-inclusive. The German and US markets have the worst inclusion rates among the larger markets, with women accounting for just 9% and 10% of fund managers respectively.&lt;/p&gt;
+
+&lt;h2&gt;Held back&lt;/h2&gt;
+
+&lt;p&gt;Female fund managers are also grossly under-represented relative to other professions that require a similar level of education, such as lawyers and doctors. In France, for example, women account for 52% of the nation&amp;#39;s lawyers and 43% of its doctors, while in the US they account for 36% and 33% respectively.&lt;/p&gt;
+
+&lt;p&gt;The Morningstar report recognises, however, that comparing fund managers with doctors and lawyers is somewhat misleading, as these professionals are credentialed on completing their education and meeting certification standards, whereas a fund management role is a leadership position typically achieved later on in a career.&lt;/p&gt;
+
+&lt;p&gt;Reasons commonly cited for women leaving the investment industry include their aversion to the male-dominated environment and taking career breaks. &amp;quot;It&amp;#39;s not uncommon for women fund managers to be married to similarly high-earning men,&amp;quot; says Adrian Lowcock, investment director at multi-manager Architas. &amp;quot;Often with a high-earning couple it is the woman who decides to step back when family responsibilities increase, leaving the man to continue to develop his career.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;A CFA Institute study published last year - the largest survey of investment management professionals on the subject of gender diversity to date - shows that nearly two-thirds of female members with dependants have primary responsibility for the care of dependants, while about a fifth of male members with dependants report similar levels of responsibility.&lt;/p&gt;
+
+&lt;h2&gt;Neck and neck&lt;/h2&gt;
+
+&lt;p&gt;Several popularised articles suggest women make better fund managers than men because they do not suffer from overconfidence. Barber &amp;amp; Odean (2001), for example, found that men trade 45% more than women, indicating that women tend to hold their investment positions for longer.&lt;/p&gt;
+
+&lt;p&gt;The Morningstar study supports this finding. It shows that women are less likely than men to manage high-turnover funds, which suggests they have more patience and higher conviction in their investment decisions.&lt;/p&gt;
+
+&lt;p&gt;However, studies on relative investment performance by gender have found no significant gap between the sexes.&lt;/p&gt;
+
+&lt;p&gt;Citywire&amp;#39;s &amp;#39;Alpha Female&amp;#39; report last year found that just over 21% of female and 23.5% of male fund managers hold Citywire ratings awarded on a quantitative basis for three-year risk-adjusted performance. Similarly, 1.9% of women and 2.4% of men claim an elite AAA rating.&lt;/p&gt;
+
+&lt;p&gt;In 2015 Rajesh &amp;amp; Boyson found that hedge funds with all-female managers &amp;#39;perform no differently from all-male managed funds and have similar risk profiles&amp;#39;.&lt;/p&gt;
+
+&lt;p&gt;Papers published in 2013 on European and US managers report similar findings. An analysis of European equity funds by Babalos, Caporale &amp;amp; Philippas found that &amp;quot;gender does not influence fund performance and that women are not more risk-averse than men&amp;quot;, while Stumpp found that, among US-based institutional investment managers, &amp;quot;women exhibit indistinguishable risk-adjusted performance to men within all approaches except value, where they significantly outperform&amp;quot;.&lt;/p&gt;
+
+&lt;h2&gt;Head to head&lt;/h2&gt;
+
+&lt;p&gt;Arguably, however, a filter acting on female fund managers enhances their average performance figures. &amp;quot;The greater pressures and challenges [women face] to succeed may weed out poor female managers, or rather it may allow more poorer male fund managers through, which dilutes the overall track record of male fund managers,&amp;quot; says Lowcock.&lt;/p&gt;
+
+&lt;p&gt;So do the top male managers outperform top female ones? We asked Ben Willis, head of research at Whitechurch&amp;nbsp;Securities, to compare leading UK female fund managers with big-name male managers operating in the same sectors.&lt;/p&gt;
+
+&lt;p&gt;He pitted four pairs against each other: Audrey Ryan at&amp;nbsp;Kames UK Opportunities&amp;nbsp;versus Nigel Thomas at&amp;nbsp;AXA Framlington UK Select Opportunities&amp;nbsp;in the UK equities sector; Karen Robertson at Standard Life Investments UK Equity High Income versus Adrian Frost at&amp;nbsp;Artemis Income&amp;nbsp;in the equity income space; Stephanie Butcher at Invesco Perpetual European Equity Income versus Alexander Darwall at&amp;nbsp;Jupiter European Income&amp;nbsp;in European equities; and Rebecca Seabrook at&amp;nbsp;F&amp;amp;C Responsible Sterling Bond&amp;nbsp;versus Richard Woolnough at&amp;nbsp;M&amp;amp;G Corporate Bond&amp;nbsp;in fixed-income markets.&lt;/p&gt;
+
+&lt;p&gt;Over five years, all four female managers had the upper hand, but that trend reversed over 10 years, when the men outperformed. &amp;quot;Male or female, these are experienced and well-respected managers,&amp;quot; says Willis. &amp;quot;All have notched up stellar returns over the longer term, and I don&amp;#39;t think gender has anything to do with it.&amp;quot;&lt;/p&gt;
+
+&lt;h2&gt;Team players&lt;/h2&gt;
+
+&lt;p&gt;Healy &amp;amp; Pate (2011) found that generally &amp;quot;women prefer to compete in teams, whereas men prefer to compete as individuals&amp;quot;. Morningstar&amp;#39;s study shows that women are more likely to run funds in growth areas, such as passive funds, funds of funds and team-managed funds; indeed, women are 19% more likely to manage on a team than men.&lt;/p&gt;
+
+&lt;p&gt;The Morningstar study looked back to January 2008, when the percentage of team-managed funds was 39.7% - a figure that had risen to 45.1% by December 2015 and continues to grow each month when the model is updated.&lt;/p&gt;
+
+&lt;p&gt;This could be a promising trend for investment returns. The CFA study shows that 70% of female members and nearly half (48%) of all members believe mixed-gender investment teams achieve better performance because of the more diverse viewpoints they bring to bear.&lt;/p&gt;
+
+&lt;p&gt;Guy Foster, head of research at Brewin Dolphin, whose 22-strong research team includes seven women, says: &amp;quot;We find that investment decisions should be challenged and that it&amp;#39;s easier to get meaningful challenges from a diverse group of individuals. The phenomenon you are looking for is cognitive diversity among decision-makers - people who think differently - and gender is one characteristic that can be indicative of that.&amp;quot; Investors, it seems, are yet to cotton on.&lt;/p&gt;
+
+&lt;p&gt;Some 46% of retail investors (a similar proportion of men and women) believe gender diversity does not matter in investment management. However, Ben Yearsley, director at financial adviser Shore Financial Planning, points to strong male/female partnerships on well-regarded investment teams, such as Jenna Barnard and John Pattullo at Henderson, Alex Ralph and James Foster at Artemis, and Georgina Hamilton and George Godber at Polar&amp;nbsp;Capital. He says: &amp;quot;I&amp;#39;m agnostic about who is in my portfolio; I just want the best. Many fantastic female fund managers form a double act with a male manager, so maybe that&amp;#39;s the best combo.&amp;quot;&lt;/p&gt;
+
+&lt;h2&gt;Damsel select portfolio outperforms&lt;/h2&gt;
+
+&lt;p&gt;We asked Tom Munro, owner of Tom Munro Financial Solutions, to construct a balanced portfolio of female-run funds. His Damsel Select Global Growth portfolio is run by seven female fund managers that the Falkirk-based adviser would &amp;quot;strongly recommend as part of any well-diversified client portfolio&amp;quot;.&lt;/p&gt;
+
+&lt;p&gt;A fifth of assets is allocated to Georgina Brittain at&amp;nbsp;JPM UK Smaller Companies, 15% each to Audrey Ryan at&amp;nbsp;Kames Ethical Equity, Stephanie Butcher at&amp;nbsp;Invesco Perpetual European Equity Income, Jane Andrews at&amp;nbsp;Smith &amp;amp; Williamson Far Eastern Income &amp;amp; Growth&amp;nbsp;and Elizabeth Soon at&amp;nbsp;PineBridge India Equity, and 10% to Karen Robertson at&amp;nbsp;Standard Life Investments UK Equity High Income&amp;nbsp;and Sarah Whitley at Baillie Gifford Japanese.&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;These seven women have proven track records and have consistently outperformed their respective benchmarks,&amp;quot; says Munro.&lt;/p&gt;
+
+&lt;p&gt;Overall, the portfolio has almost 45% in UK equities, with the remainder predominantly invested in shares listed in Asia Pacific, Japan and Europe.&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;It has a well-diversified global mix with a strong emphasis on the UK, which is fairly typical,&amp;quot; says Munro. &amp;quot;As the majority of assets are in shares, this isn&amp;#39;t a portfolio for cautious investors or those with a short-to-medium investment timeframe. But I&amp;#39;d happily recommend it for clients with a bigger appetite for risk-seeking and above-average returns, and typically those with a time horizon of 10 years or more.&amp;quot;&lt;/p&gt;
+</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="sections1">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>5f84b4b8-fe1a-4e9c-a3b3-e33cecab51c1</sv:value>
+    </sv:property>
+    <sv:property sv:name="imageLink" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:createdBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2017-06-01T15:37:34.445+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2017-06-02T15:50:50.907+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="text" sv:type="String">
+      <sv:value>&lt;h2&gt;&lt;em&gt;&lt;span style="color:rgb(54, 54, 54); font-family:lato,sans-serif; font-size:15px"&gt;Past performance is not a reliable indicator of future results.&lt;/span&gt;&lt;/em&gt;&lt;/h2&gt;
+
+&lt;h2&gt;Female leading lights and rising stars&lt;/h2&gt;
+
+&lt;h2&gt;UK equities&lt;/h2&gt;
+
+&lt;p&gt;Julie Dean&amp;nbsp;at Sanditon UK has 25 years&amp;#39; experience. She takes a business cycle approach to investing: she buys out-of-favour companies that should perform well during the next stage. &amp;quot;Her profile rose following the financial crisis, when she had an impressive period of performance, but she has lagged in the past few years,&amp;quot; says Lowcock.&lt;/p&gt;
+
+&lt;p&gt;Newer kid on the block&amp;nbsp;Georgina Hamilton&amp;nbsp;at&amp;nbsp;Polar Capital UK Value Opportunities&amp;nbsp;made her name alongside George Godber managing a similar fund for Milton. Their current fund launched in January. The duo run it with a deep value approach that seeks out undervalued UK businesses. Hamilton has eight years&amp;#39; industry experience.&lt;/p&gt;
+
+&lt;h2&gt;Smaller companies&lt;/h2&gt;
+
+&lt;p&gt;Jenny Jones, one of the few female fund managers with more than 35 years&amp;#39; experience, runs Schroder US Smaller Companies and Schroder US Mid Cap - funds Anna Sofat, founder of London&amp;#39;s Addidi Wealth, favours. &amp;quot;Jenny has consistently provided alpha returns in a highly efficient market where it&amp;#39;s difficult to outperform,&amp;quot; says Sofat. Yearsley tips.&lt;/p&gt;
+
+&lt;p&gt;Holly Cassell&amp;nbsp;at Neptune Investment Management as a rising star. The Oxford University graduate has been in the industry for less than four years and has been assistant manager on the&amp;nbsp;Neptune UK Mid Cap&amp;nbsp;and&amp;nbsp;Neptune UK Opportunities&amp;nbsp;funds for 18 months. &amp;quot;One to watch, rather than proven talent,&amp;quot; says Yearsley.&lt;/p&gt;
+
+&lt;h2&gt;Equity income&lt;/h2&gt;
+
+&lt;p&gt;Stephanie Butcher&amp;nbsp;at&amp;nbsp;Invesco Perpetual European Equity Income&amp;nbsp;has been investing in Europe for almost 20 years. Her approach focuses on valuation and paying the &amp;#39;right&amp;#39; price for stock. &amp;quot;Her record is exemplary,&amp;quot; says Willis. &amp;quot;We&amp;#39;ve invested heavily in this fund in the past, selling out after the Brexit vote, which was a mistake.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;Clare Hart&amp;nbsp;has less experience at 13 years, but she has made a huge success of&amp;nbsp;JPM US Equity Income&amp;nbsp;over the past nine years. &amp;quot;It has consistently outperformed the S&amp;amp;P 500 - notoriously difficult for a US fund,&amp;quot; adds Willis.&lt;/p&gt;
+
+&lt;h2&gt;Japan&lt;/h2&gt;
+
+&lt;p&gt;Sarah Whitley, manager of the&amp;nbsp;Baillie Gifford Japanese fund&amp;nbsp;and&amp;nbsp;Baillie Gifford Japan Trust, has been in the industry for 37 tears and managing Japanese equities for 35 years - a period that includes the country&amp;#39;s two &amp;quot;lost decades&amp;quot;. She focuses on bottom-up stockpicking with fundamental analysis and stock-level research.&lt;/p&gt;
+
+&lt;p&gt;Another experienced hand in the sector is&amp;nbsp;Ruth Nash, who has been in the industry for 32 years and a fund manager for 29 of those. She runs the&amp;nbsp;JOHCM Japan Dividend Growth fund, which seeks out firms with above-average dividend yields and dividend growth.&lt;/p&gt;
+
+&lt;h2&gt;Bonds&lt;/h2&gt;
+
+&lt;p&gt;Paola Binns&amp;nbsp;has more than 28 years&amp;#39; experience in bond markets, the past 10 of which have been spent running mandates for Royal London. Her Royal London Short Duration Credit fund focuses on short-dated credit, which has risen in popularity amid rising US interest rates and higher headline inflation in developed markets.&lt;/p&gt;
+
+&lt;p&gt;Rebecca Morris Charles&amp;nbsp;could be the next leading lady in the bond world, having joined Jenna Barnard at the&amp;nbsp;Henderson Preference &amp;amp; Bond&amp;nbsp;fund in 2014. Morris-Charles joined Henderson eight years ago through a graduate scheme. Barnard joined as a credit analyst 15 years ago and became a portfolio manager two years later.&lt;/p&gt;
+
+&lt;h2&gt;Specialist&lt;/h2&gt;
+
+&lt;p&gt;Claudia Quiroz&amp;nbsp;has more than 15 years&amp;#39; experience in sustainable, ethical and responsible investing. Castlefield Advisory Partners has used her&amp;nbsp;Cheviot Climate Assets fund&amp;nbsp;since June 2012. &amp;quot;The performance has been excellent compared with peers,&amp;quot; says Castlefield partner John Ditchfield. &amp;quot;This is a great core fund for a balanced investor looking to beat inflation.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;Linden Thomson has 13 years&amp;#39; industry experience, six of those as a fund manager. She has run the&amp;nbsp;AXA Framlington Biotech fund&amp;nbsp;since 2012. &amp;quot;The fund&amp;#39;s performance is closely linked to that of the sector as a whole, but Thomson performed well in the bull market a few years ago,&amp;quot; says Lowcock.&lt;/p&gt;
+</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module SYSTEM "module.dtd" >
+<module>
+  <name>ii-views</name>
+  <displayName>Interactive Investor Views Magnolia Module</displayName>
+  <description>${project.description}</description>
+  <class>td.apps.iiViews</class>
+  <versionHandler>td.apps.setup.iiViewsVersionHandler</versionHandler>
+  <version>1.0</version>
+  <components>
+    <id>main</id>
+    <component>
+      <type>td.apps.template.iiViewsTemplateFunctions</type>
+      <implementation>td.apps.template.iiViewsTemplateFunctions</implementation>
+    </component>   
+  </components>
+  <dependencies>
+    <dependency>
+      <name>core</name>
+      <version>5.4.8/*</version>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <name>magnolia</name>
+      <workspaces>
+        <workspace>ii-views-articles</workspace>
+      </workspaces>
+      <nodeTypeFile>/mgnl-nodetypes/ii-views-articles-nodetypes.xml</nodeTypeFile>
+    </repository>
+    <repository>
+      <name>magnolia</name>
+      <workspaces>
+        <workspace>ii-views-categories</workspace>
+      </workspaces>
+      <nodeTypeFile>/mgnl-nodetypes/ii-views-categories-nodetypes.xml</nodeTypeFile>
+    </repository>    
+    <repository>
+      <name>magnolia</name>
+      <workspaces>
+        <workspace>ii-views-authors</workspace>
+      </workspaces>
+      <nodeTypeFile>/mgnl-nodetypes/ii-views-authors-nodetypes.xml</nodeTypeFile>
+    </repository>    
+  </repositories>   
+</module>

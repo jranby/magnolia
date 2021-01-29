@@ -1,0 +1,332 @@
+appClass: info.magnolia.ui.contentapp.ContentApp
+class: info.magnolia.ui.contentapp.ContentAppDescriptor
+subApps:
+  browser:
+    subAppClass: info.magnolia.ui.contentapp.browser.BrowserSubApp
+    class: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor
+    # actionbar definition
+    actionbar:
+      defaultAction: editFund
+      sections:
+        - name: root
+          groups:
+            - name: addActions
+              items:
+                - name: addFund
+                - name: addFolder
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+          availability:
+            nodes: false
+            root: true
+        - name: folder
+          label: Folder
+          availability:
+            nodeTypes:
+              - mgnl:folder
+          groups:
+            - name: addActions
+              items:
+                - name: addFund
+                - name: addFolder
+            - name: editActions
+              items:
+                - name: editFolder
+                - name: renameFolder
+                - name: deleteFolder
+                - name: delete
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+        - name: fund
+          label: Fund
+          availability:
+            nodeTypes:
+              - mgnl:qsf
+          groups:
+            - name: addActions
+              items:
+                - name: addFund
+                - name: addFolder
+            - name: editActions
+              items:
+                - name: editFund
+                - name: renameFund
+                - name: duplicate
+                - name: deleteFund
+                - name: move
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+    # actions definition
+    actions:
+      addFund:
+        subAppId: detail
+        icon: icon-add-item
+        nodeType: mgnl:qsf
+        appName: quickStartFunds
+        class: info.magnolia.ui.contentapp.detail.action.CreateItemActionDefinition
+        availability:
+          root: true
+          nodeTypes:
+            - mgnl:folder
+      addFolder:
+        icon: icon-add-folder
+        class: info.magnolia.ui.framework.action.AddFolderActionDefinition
+        availability:
+          root: true
+      editFolder:
+        icon: icon-edit
+        dialogName: ui-framework:folder
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+      deleteFolder:
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.DeleteItemActionDefinition
+      editFund:
+        subAppId: detail
+        icon: icon-edit
+        appName: quickStartFunds
+        class: info.magnolia.ui.contentapp.detail.action.EditItemActionDefinition
+        availability:
+          nodeTypes:
+            - mgnl:qsf
+      renameFund:
+        label: Rename Fund
+        dialogName: ui-framework:folder
+        icon: icon-edit
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            - mgnl:qsf
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      duplicate:
+        label: Duplicate Fund
+        icon: icon-duplicate
+        class: info.magnolia.ui.framework.action.DuplicateNodeActionDefinition
+        availability:
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule              
+      deleteFund:
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.DeleteItemActionDefinition
+      move:
+        label: Move item
+        icon: icon-move
+        class: info.magnolia.ui.contentapp.movedialog.action.OpenMoveDialogActionDefinition
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule        
+      activate:
+        command: activate
+        icon: icon-publish
+        catalog: versioned
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+      activateRecursive:
+        catalog: versioned
+        command: activate
+        icon: icon-publish-incl-sub
+        recursive: true
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      deactivate:
+        catalog: versioned
+        command: deactivate
+        icon: icon-unpublish
+        class: info.magnolia.ui.framework.action.ActivationActionDefinition
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      export:
+        command: export
+        icon: icon-export
+        class: info.magnolia.ui.framework.action.ExportActionDefinition
+        availability:
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      import:
+        icon: icon-import
+        dialogName: ui-admincentral:import
+        class: info.magnolia.ui.framework.action.OpenCreateDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule    
+    # workbench definition
+    workbench:
+      dropConstraintClass: info.magnolia.ui.workbench.tree.drop.AlwaysTrueDropConstraint
+      editable: false
+      contentViews:
+        - name: tree
+          class: info.magnolia.ui.workbench.tree.TreePresenterDefinition
+          columns: &myColumns
+            - name: name
+              editable: true
+              sortable: true
+              propertyName: jcrName
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition
+            - name: status
+              width: 45
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.StatusColumnFormatter
+              class: info.magnolia.ui.workbench.column.definition.StatusColumnDefinition
+            - name: moddate
+              width: 160
+              sortable: true
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.DateColumnFormatter
+              propertyName: mgnl:lastModified
+              class: info.magnolia.ui.workbench.column.definition.MetaDataColumnDefinition
+        - name: list
+          class: info.magnolia.ui.workbench.list.ListPresenterDefinition
+          columns: *myColumns
+        - name: thumbnail
+          class: info.magnolia.ui.workbench.thumbnail.ThumbnailPresenterDefinition
+        - name: search
+          class: info.magnolia.ui.workbench.search.SearchPresenterDefinition
+          columns: *myColumns
+    # image provider definition
+    imageProvider:
+       class: info.magnolia.dam.app.ui.imageprovider.DamLinkImageProviderDefinition
+       damLinkPropertyName: image
+    # contentConnector definition
+    contentConnector:
+      includeProperties: false
+      workspace: qsf
+      rootPath: /
+      defaultOrder: jcrName
+      nodeTypes:
+        - name: mgnl:qsf
+          icon: icon-items
+        - name: mgnl:folder
+          icon: icon-folder  
+  # browser subapp definition
+  detail:
+    subAppClass: info.magnolia.ui.contentapp.detail.DetailSubApp
+    class: info.magnolia.ui.contentapp.detail.DetailSubAppDescriptor
+    actions:
+      commit:
+        implementationClass: info.magnolia.ui.form.action.SaveFormAction
+        class: info.magnolia.ui.form.action.SaveFormActionDefinition
+      cancel:
+        class: info.magnolia.ui.form.action.CancelFormActionDefinition
+    editor:
+      actions:
+        - name: commit
+        - name: cancel
+      form:
+        tabs:
+          - name: fund
+            fields:
+              - name: jcrName
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                required: true
+              - name: sedol
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                required: true
+              - name: risk
+                class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+                required: true
+                sortOptions: false
+                options:
+                  - name: low
+                    value: low
+                    label: Low
+                    selected: true
+                  - name: medium
+                    value: medium
+                    label: Medium              
+                  - name: high
+                    value: high
+                    label: High
+              - name: riskPercent
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: intro
+                class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+                rows: 2
+              - name: introList
+                class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+                transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueTransformer
+                field:
+                  name: introListItem
+                  label: ""
+                  class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: aim
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: volatility
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: focus
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: objective
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                rows: 2
+              - name: why
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                rows: 2
+              - name: comments
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                rows: 2
+              - name: discountedFee
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: riskRating
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: brochure
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: dam
+                appName: assets
+                contentPreviewDefinition: true
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent                
+              - name: kiid
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: factsheet
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: video
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                description: Enter the iframe source url to output
+      # nodeType definition
+      nodeType:
+        icon: icon-items
+        name: mgnl:qsf
+    contentConnector:
+      workspace: qsf

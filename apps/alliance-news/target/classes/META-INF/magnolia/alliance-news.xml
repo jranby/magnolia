@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE module SYSTEM "module.dtd" >
+<module>
+  <name>alliance-news</name>
+  <displayName>Alliance News Magnolia Module</displayName>
+  <description>${project.description}</description>
+  <class>td.apps.AllianceNews</class>
+  <versionHandler>td.apps.setup.AllianceNewsVersionHandler</versionHandler>
+  <version>1.0</version>
+  <components>
+    <id>main</id>
+    <component>
+      <type>td.apps.util.AllianceNewsFunctions</type>
+      <implementation>td.apps.util.AllianceNewsFunctions</implementation>
+    </component>   
+  </components>
+  <dependencies>
+    <dependency>
+      <name>core</name>
+      <version>5.4.8/*</version>
+    </dependency>
+  </dependencies>
+  <repositories>
+    <repository>
+      <name>magnolia</name>
+      <workspaces>
+        <workspace>alliance-news</workspace>
+      </workspaces>
+      <nodeTypeFile>/mgnl-nodetypes/alliance-news-nodetypes.xml</nodeTypeFile>
+    </repository>
+    <repository>
+      <name>magnolia</name>
+      <workspaces>
+        <workspace>alliance-news-categories</workspace>
+      </workspaces>
+      <nodeTypeFile>/mgnl-nodetypes/alliance-news-categories-nodetypes.xml</nodeTypeFile>
+    </repository>    
+  </repositories>   
+</module>

@@ -1,0 +1,289 @@
+appClass: info.magnolia.ui.contentapp.ContentApp
+class: info.magnolia.ui.contentapp.ContentAppDescriptor
+subApps:
+  browser:
+    subAppClass: info.magnolia.ui.contentapp.browser.BrowserSubApp
+    class: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor
+    # actionbar definition
+    actionbar:
+      defaultAction: editMarket
+      sections:
+        - name: root
+          groups:
+            - name: addActions
+              items:
+                - name: addMarket
+                - name: addFolder
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+          availability:
+            nodes: false
+            root: true
+        - name: folder
+          label: Folder
+          availability:
+            nodeTypes:
+              - mgnl:folder
+          groups:
+            - name: addActions
+              items:
+                - name: addMarket
+                - name: addFolder
+            - name: editActions
+              items:
+                - name: editFolder
+                - name: renameFolder
+                - name: deleteFolder
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+        - name: market
+          label: Market
+          availability:
+            nodeTypes:
+              - mgnl:market
+          groups:
+            - name: addActions
+              items:
+                - name: addMarket
+                - name: addFolder
+            - name: editActions
+              items:
+                - name: editMarket
+                - name: renameMarket
+                - name: duplicate
+                - name: deleteMarket
+                - name: move
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+    # actions definition
+    actions:
+      addMarket:
+        subAppId: detail
+        icon: icon-add-item
+        nodeType: mgnl:market
+        appName: markets
+        class: info.magnolia.ui.contentapp.detail.action.CreateItemActionDefinition
+        availability:
+          root: true
+          nodeTypes:
+            - mgnl:folder
+      addFolder:
+        icon: icon-add-folder
+        class: info.magnolia.ui.framework.action.AddFolderActionDefinition
+        availability:
+          root: true
+      editFolder:
+        icon: icon-edit
+        dialogName: ui-framework:folder
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+      deleteFolder:
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.DeleteItemActionDefinition
+      editMarket:
+        subAppId: detail
+        icon: icon-edit
+        appName: markets
+        class: info.magnolia.ui.contentapp.detail.action.EditItemActionDefinition
+        availability:
+          nodeTypes:
+            - mgnl:market
+      renameMarket:
+        label: Rename Market
+        dialogName: ui-framework:folder
+        icon: icon-edit
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            - mgnl:market
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      duplicate:
+        label: Duplicate Market
+        icon: icon-duplicate
+        class: info.magnolia.ui.framework.action.DuplicateNodeActionDefinition
+        availability:
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule              
+      deleteMarket:
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.DeleteItemActionDefinition
+      move:
+        label: Move item
+        icon: icon-move
+        class: info.magnolia.ui.contentapp.movedialog.action.OpenMoveDialogActionDefinition
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule        
+      activate:
+        catalog: workflow
+        command: activate
+        dialogName: workflow:publish
+        icon: icon-publish
+        class: info.magnolia.module.workflow.action.OpenPublicationDialogActionDefinition
+        formTypes:
+          - name: comment
+            type: java.lang.String
+          - name: publicationDate
+            type: java.util.Date
+        availability:
+          writePermissionRequired: true
+      activateRecursive:
+        catalog: workflow
+        command: activate
+        dialogName: workflow:publishRecursive
+        icon: icon-publish-incl-sub
+        recursive: true
+        class: info.magnolia.module.workflow.action.OpenPublicationDialogActionDefinition
+        formTypes:
+          - name: comment
+            type: java.lang.String
+          - name: publicationDate
+            type: java.util.Date
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      deactivate:
+        catalog: workflow
+        command: deactivate
+        dialogName: workflow:unpublish
+        icon: icon-unpublish
+        class: info.magnolia.module.workflow.action.OpenPublicationDialogActionDefinition
+        formTypes:
+          - name: comment
+            type: java.lang.String
+          - name: publicationDate
+            type: java.util.Date
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      export:
+        command: export
+        icon: icon-export
+        class: info.magnolia.ui.framework.action.ExportActionDefinition
+        availability:
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      import:
+        icon: icon-import
+        dialogName: ui-admincentral:import
+        class: info.magnolia.ui.framework.action.OpenCreateDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule    
+    # workbench definition
+    workbench:
+      dropConstraintClass: info.magnolia.ui.workbench.tree.drop.AlwaysTrueDropConstraint
+      editable: false
+      contentViews:
+        - name: tree
+          class: info.magnolia.ui.workbench.tree.TreePresenterDefinition
+          columns: &myColumns
+            - name: name
+              editable: true
+              sortable: true
+              propertyName: jcrName
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition
+            - name: status
+              width: 45
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.StatusColumnFormatter
+              class: info.magnolia.ui.workbench.column.definition.StatusColumnDefinition
+            - name: moddate
+              width: 160
+              sortable: true
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.DateColumnFormatter
+              propertyName: mgnl:lastModified
+              class: info.magnolia.ui.workbench.column.definition.MetaDataColumnDefinition
+        - name: list
+          class: info.magnolia.ui.workbench.list.ListPresenterDefinition
+          columns: *myColumns
+        - name: thumbnail
+          class: info.magnolia.ui.workbench.thumbnail.ThumbnailPresenterDefinition
+        - name: search
+          class: info.magnolia.ui.workbench.search.SearchPresenterDefinition
+          columns: *myColumns
+    # image provider definition
+    imageProvider:
+       class: info.magnolia.dam.app.ui.imageprovider.DamLinkImageProviderDefinition
+       damLinkPropertyName: image
+    # contentConnector definition
+    contentConnector:
+      includeProperties: false
+      workspace: markets
+      rootPath: /
+      defaultOrder: jcrName
+      nodeTypes:
+        - name: mgnl:market
+          icon: icon-asset-pool
+        - name: mgnl:folder
+          icon: icon-folder  
+  # browser subapp definition
+  detail:
+    subAppClass: info.magnolia.ui.contentapp.detail.DetailSubApp
+    class: info.magnolia.ui.contentapp.detail.DetailSubAppDescriptor
+    actions:
+      commit:
+        implementationClass: info.magnolia.ui.form.action.SaveFormAction
+        class: info.magnolia.ui.form.action.SaveFormActionDefinition
+      cancel:
+        class: info.magnolia.ui.form.action.CancelFormActionDefinition
+    editor:
+      actions:
+        - name: commit
+        - name: cancel
+      form:
+        tabs:
+          - name: market
+            fields:
+              - name: jcrName
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: instrumentAlpha
+                label: Instrument Alpha
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: instrumentNumeric
+                label: Instrument Numeric
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+      # nodeType definition
+      nodeType:
+        icon: icon-items
+        name: mgnl:market
+    contentConnector:
+      workspace: markets

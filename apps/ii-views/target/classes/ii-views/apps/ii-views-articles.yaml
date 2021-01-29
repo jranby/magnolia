@@ -1,0 +1,462 @@
+appClass: info.magnolia.ui.contentapp.ContentApp
+class: info.magnolia.ui.contentapp.ContentAppDescriptor
+subApps:
+  browser:
+    subAppClass: info.magnolia.ui.contentapp.browser.BrowserSubApp
+    class: info.magnolia.ui.contentapp.browser.BrowserSubAppDescriptor
+    # actionbar definition
+    actionbar:
+      defaultAction: editArticle
+      sections:
+        - name: root
+          groups:
+            - name: addActions
+              items:
+                - name: addArticle
+                - name: addFolder
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+          availability:
+            nodes: false
+            root: true
+        - name: folder
+          label: Folder
+          availability:
+            nodeTypes:
+              - mgnl:folder
+          groups:
+            - name: addActions
+              items:
+                - name: addArticle
+                - name: addFolder
+            - name: editActions
+              items:
+                - name: editFolder
+                - name: renameFolder
+                - name: deleteFolder
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+        - name: ii-views
+          label: Article
+          availability:
+            nodeTypes:
+              - mgnl:ii-views-article
+          groups:
+            - name: addActions
+              items:
+                - name: addArticle
+                - name: addFolder
+            - name: editActions
+              items:
+                - name: editArticle
+                - name: renameArticle
+                - name: duplicate
+                - name: deleteArticle
+                - name: move
+            - name: publishingActions
+              items:
+                - name: activate
+                - name: activateRecursive
+                - name: deactivate
+            - name: eximActions
+              items:
+                - name: export
+                - name: import
+    # actions definition
+    actions:
+      addArticle:
+        subAppId: detail
+        icon: icon-add-item
+        nodeType: mgnl:ii-views-article
+        appName: ii-views-articles
+        class: info.magnolia.ui.contentapp.detail.action.CreateItemActionDefinition
+        availability:
+          root: true
+          nodeTypes:
+            - mgnl:folder
+      addFolder:
+        icon: icon-add-folder
+        class: info.magnolia.ui.framework.action.AddFolderActionDefinition
+        availability:
+          root: true
+      editFolder:
+        icon: icon-edit
+        dialogName: ui-framework:folder
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+      deleteFolder:
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.DeleteItemActionDefinition
+      editArticle:
+        subAppId: detail
+        icon: icon-edit
+        appName: ii-views-articles
+        class: info.magnolia.ui.contentapp.detail.action.EditItemActionDefinition
+        availability:
+          nodeTypes:
+            - mgnl:ii-views-article
+      renameArticle:
+        label: Rename Article
+        dialogName: ui-framework:folder
+        icon: icon-edit
+        class: info.magnolia.ui.framework.action.OpenEditDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          nodeTypes:
+            - mgnl:ii-views-article
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      duplicate:
+        label: Duplicate Article
+        icon: icon-duplicate
+        class: info.magnolia.ui.framework.action.DuplicateNodeActionDefinition
+        availability:
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule              
+      deleteArticle:
+        icon: icon-delete
+        class: info.magnolia.ui.framework.action.DeleteItemActionDefinition
+      move:
+        label: Move item
+        icon: icon-move
+        class: info.magnolia.ui.contentapp.movedialog.action.OpenMoveDialogActionDefinition
+        availability:
+          multiple: true
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule        
+      activate:
+        catalog: workflow
+        command: activate
+        dialogName: workflow:publish
+        icon: icon-publish
+        class: info.magnolia.module.workflow.action.OpenPublicationDialogActionDefinition
+        formTypes:
+          - name: comment
+            type: java.lang.String
+          - name: publicationDate
+            type: java.util.Date
+        availability:
+          writePermissionRequired: true
+      activateRecursive:
+        catalog: workflow
+        command: activate
+        dialogName: workflow:publishRecursive
+        icon: icon-publish-incl-sub
+        recursive: true
+        class: info.magnolia.module.workflow.action.OpenPublicationDialogActionDefinition
+        formTypes:
+          - name: comment
+            type: java.lang.String
+          - name: publicationDate
+            type: java.util.Date
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      deactivate:
+        catalog: workflow
+        command: deactivate
+        dialogName: workflow:unpublish
+        icon: icon-unpublish
+        class: info.magnolia.module.workflow.action.OpenPublicationDialogActionDefinition
+        formTypes:
+          - name: comment
+            type: java.lang.String
+          - name: publicationDate
+            type: java.util.Date
+        availability:
+          writePermissionRequired: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      export:
+        command: export
+        icon: icon-export
+        class: info.magnolia.ui.framework.action.ExportActionDefinition
+        availability:
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule
+      import:
+        icon: icon-import
+        dialogName: ui-admincentral:import
+        class: info.magnolia.ui.framework.action.OpenCreateDialogActionDefinition
+        availability:
+          writePermissionRequired: true
+          root: true
+          rules:
+            - name: IsNotDeletedRule
+              implementationClass: info.magnolia.ui.framework.availability.IsNotDeletedRule    
+    # workbench definition
+    workbench:
+      dropConstraintClass: info.magnolia.ui.workbench.tree.drop.AlwaysTrueDropConstraint
+      editable: false
+      contentViews:
+        - name: tree
+          class: info.magnolia.ui.workbench.tree.TreePresenterDefinition
+          columns: &myColumns
+            - name: name
+              editable: true
+              sortable: true
+              propertyName: jcrName
+              class: info.magnolia.ui.workbench.column.definition.PropertyColumnDefinition
+            - name: status
+              width: 45
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.StatusColumnFormatter
+              class: info.magnolia.ui.workbench.column.definition.StatusColumnDefinition
+            - name: moddate
+              width: 160
+              sortable: true
+              displayInChooseDialog: false
+              formatterClass: info.magnolia.ui.workbench.column.DateColumnFormatter
+              propertyName: mgnl:lastModified
+              class: info.magnolia.ui.workbench.column.definition.MetaDataColumnDefinition
+        - name: list
+          class: info.magnolia.ui.workbench.list.ListPresenterDefinition
+          columns: *myColumns
+        - name: thumbnail
+          class: info.magnolia.ui.workbench.thumbnail.ThumbnailPresenterDefinition
+        - name: search
+          class: info.magnolia.ui.workbench.search.SearchPresenterDefinition
+          columns: *myColumns
+    # image provider definition
+    imageProvider:
+       class: info.magnolia.dam.app.ui.imageprovider.DamLinkImageProviderDefinition
+       damLinkPropertyName: image
+    # contentConnector definition
+    contentConnector:
+      includeProperties: false
+      workspace: ii-views-articles
+      rootPath: /
+      defaultOrder: jcrName
+      nodeTypes:
+        - name: mgnl:ii-views-article
+          icon: icon-development-app
+        - name: mgnl:folder
+          icon: icon-folder  
+  # browser subapp definition
+  detail:
+    subAppClass: info.magnolia.ui.contentapp.detail.DetailSubApp
+    class: info.magnolia.ui.contentapp.detail.DetailSubAppDescriptor
+    actions:
+      commit:
+        implementationClass: info.magnolia.ui.form.action.SaveFormAction
+        class: info.magnolia.ui.form.action.SaveFormActionDefinition
+      cancel:
+        class: info.magnolia.ui.form.action.CancelFormActionDefinition
+    editor:
+      actions:
+        - name: commit
+        - name: cancel
+      form:
+        tabs:
+          - name: article
+            fields:
+              - name: jcrName
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: excerpt
+                rows: 5
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: author
+                targetWorkspace: ii-views-authors
+                appName: ii-views-authors
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                identifierToPathConverter:
+                  class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+              - name: banner
+                description: Choose or upload a banner image used for the background
+                targetWorkspace: dam
+                appName: assets
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+              - name: featured
+                description: Choose or upload a featured image
+                targetWorkspace: dam
+                appName: assets
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+              - name: publishDate
+                class: info.magnolia.ui.form.field.definition.DateFieldDefinition
+                label: Publish Date
+                time: false
+                type: Date
+                dateFormat: dd-MM-yyyy
+                timeFormat: HH
+                description: Enter the date for publishing item, this is experimental but will allow for hiding items that have a publish date in the future
+                required: true
+          - name: sections
+            fields:
+              - name: sections
+                class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+                transformerClass: info.magnolia.ui.form.field.transformer.multi.DelegatingMultiValueFieldTransformer
+                field:
+                  name: compositeField
+                  class: info.magnolia.ui.form.field.definition.CompositeFieldDefinition
+                  transformerClass: info.magnolia.ui.form.field.transformer.composite.DelegatingCompositeFieldTransformer
+                  layout: vertical
+                  fields:
+                    - name: intro
+                      class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                      rows: 5
+                    - name: text
+                      class: info.magnolia.ui.form.field.definition.RichTextFieldDefinition
+                      configJsFile: /.resources/tddirect-site/webresources/js/ckeditor/config.js
+                    - name: imageSrc
+                      class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                      targetWorkspace: dam
+                      appName: assets
+                      identifierToPathConverter:
+                        class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                      contentPreviewDefinition:
+                        contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent                       
+                    - name: imageCaption
+                      class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                    - name: imageLink
+                      class: info.magnolia.ui.form.field.definition.SwitchableFieldDefinition
+                      transformerClass: info.magnolia.ui.form.field.transformer.composite.SwitchableTransformer
+                      options:
+                        - name: internal
+                          label: Internal
+                          selected: true
+                          value: internal
+                        - name: external
+                          label: External
+                          value: external
+                        - name: article
+                          label: Article
+                          value: article
+                        - name: asset
+                          label: Asset
+                          value: asset
+                      fields:
+                        - name: internal
+                          identifierToPathConverter:
+                            class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+                          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                          label: ""
+                          targetWorkspace: website
+                          appName: pages
+                        - name: external
+                          class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                          label: ""
+                          rows: 1
+                        - name: article
+                          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                          label: ""
+                          targetWorkspace: ii-views-articles
+                          appName: ii-views-articles                                                         
+                        - name: asset
+                          label: ""
+                          class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                          targetWorkspace: dam
+                          appName: assets
+                          contentPreviewDefinition: true
+                          identifierToPathConverter:
+                            class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                          contentPreviewDefinition:
+                            contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent                      
+                    - name: video
+                      class: info.magnolia.ui.form.field.definition.TextFieldDefinition                     
+          - name: categories
+            label: Categories
+            fields:
+              - name: categories
+                class: info.magnolia.ui.form.field.definition.MultiValueFieldDefinition
+                transformerClass: info.magnolia.ui.form.field.transformer.multi.MultiValueTransformer
+                field:
+                  name: category
+                  targetWorkspace: articlecategories
+                  appName: articleCategories
+                  class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                  identifierToPathConverter:
+                    class: info.magnolia.ui.form.field.converter.BaseIdentifierToPathConverter
+          - name: meta
+            label: Meta
+            fields:
+              - name: metaTitle
+                label: Meta Title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                i18n: true        
+              - name: keywords
+                label: Keywords
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                i18n: true
+                rows: 3
+              - name: description
+                label: Description
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                i18n: true
+                rows: 5
+              - name: robots
+                class: info.magnolia.ui.form.field.definition.SelectFieldDefinition
+                label: Robots
+                description: Choose the robots meta tag to output, leave empty to hide.
+                options:
+                  - name: none
+                    value: ""
+                    label: ""
+                    selected: true
+                  - name: all
+                    value: all
+                    label: all
+                  - name: index-nofollow
+                    value: index, nofollow
+                    label: index, nofollow
+                  - name: noindex-follow
+                    value: noindex, follow
+                    label: noindex, follow            
+                  - name: noindex-nofollow
+                    value: noindex, nofollow
+                    label: noindex, nofollow              
+          - name: opengraph
+            label: OpenGraph
+            fields:
+              - name: ogTitle
+                label: Og:Title
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+              - name: ogDescription
+                label: Og:Description
+                class: info.magnolia.ui.form.field.definition.TextFieldDefinition
+                rows: 5
+              - name: ogImage
+                class: info.magnolia.ui.form.field.definition.LinkFieldDefinition
+                targetWorkspace: dam
+                appName: assets
+                label: Og:Image
+                identifierToPathConverter:
+                  class: info.magnolia.dam.app.assets.field.translator.AssetCompositeIdKeyTranslator
+                contentPreviewDefinition:
+                  contentPreviewClass: info.magnolia.dam.app.ui.field.DamFilePreviewComponent
+      # nodeType definition
+      nodeType:
+        icon: icon-items
+        name: mgnl:ii-views-article
+    contentConnector:
+      workspace: ii-views-articles

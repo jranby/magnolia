@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="ftse-100-breaks-out-to-new-record" xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>mgnl:ii-views-article</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>eb0c476e-3c0b-4cbb-9d96-277db865b1a4</sv:value>
+  </sv:property>
+  <sv:property sv:name="author" sv:type="String">
+    <sv:value>e18f2d21-70e2-45e8-9664-5956a1e1ee7b</sv:value>
+  </sv:property>
+  <sv:property sv:name="excerpt" sv:type="String">
+    <sv:value>This was meant to be one of the biggest political defeats of all-time. Jeremy Corbyn's brand of old-school socialism is so out of place in modern Britain that Theresa May's gamble on a snap general election made perfect sense. Or so the thinking goes.</sv:value>
+  </sv:property>
+  <sv:property sv:name="featured" sv:type="String">
+    <sv:value>jcr:a4beffa7-a98f-49df-9fe1-5be33830f715</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:createdBy" sv:type="String">
+    <sv:value>admin</sv:value>
+  </sv:property>
+  <sv:property sv:name="keywords" sv:type="String">
+    <sv:value>FTSE 100 record</sv:value>
+  </sv:property>
+  <sv:property sv:name="metaTitle" sv:type="String">
+    <sv:value>FTSE 100 breaks out to new record</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:created" sv:type="Date">
+    <sv:value>2017-06-01T15:54:59.251+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:createdBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+    <sv:value>2017-06-02T15:45:57.852+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:property sv:name="publishDate" sv:type="Date">
+    <sv:value>2017-05-31T00:00:00.000+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="robots" sv:type="String">
+    <sv:value>none</sv:value>
+  </sv:property>
+  <sv:property sv:name="title" sv:type="String">
+    <sv:value>FTSE 100 breaks out to new record</sv:value>
+  </sv:property>
+  <sv:node sv:name="sections0">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>a025ce87-7d68-4eb6-ab23-a769a846ddd0</sv:value>
+    </sv:property>
+    <sv:property sv:name="imageLink" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+    <sv:property sv:name="imageSrc" sv:type="String">
+      <sv:value>jcr:17262c58-a0f4-4236-b3e6-5cb820c43cce</sv:value>
+    </sv:property>
+    <sv:property sv:name="intro" sv:type="String">
+      <sv:value>This was meant to be one of the biggest political defeats of all-time. Jeremy Corbyn's brand of old-school socialism is so out of place in modern Britain that Theresa May's gamble on a snap general election made perfect sense. Or so the thinking goes.</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:createdBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2017-06-01T15:54:59.252+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2017-06-02T15:45:57.853+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="text" sv:type="String">
+      <sv:value>&lt;p&gt;When the PM called the election six weeks ago, pollsters gave her 48% of the vote and Labour just 24%. Now, a YouGov poll suggests big losses for the Tories and a hung parliament.&lt;/p&gt;
+
+&lt;p&gt;Fears that anti-business candidate Corbyn is possibly closer than ever to Number 10 dumped sterling back below $1.28, and to levels not seen in almost six weeks.&lt;/p&gt;
+
+&lt;p&gt;And it could go lower still, according to currency analysts at UBS. &amp;quot;We think markets remain overly optimistic on forward growth in the UK,&amp;quot; they say.&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;With the slowdown in the UK economy ahead of us and the external sector still vulnerable to Brexit risks but also the global cycle, risks appear skewed towards further GBP weakness.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;However grim the political ramifications are for some stocks, a falling pound is underpinning gains for the massively export-led&amp;nbsp;FTSE 100&amp;nbsp;(UKX) Wednesday.&lt;/p&gt;
+
+&lt;p&gt;Big overseas earners like kitchen cleaners giant&amp;nbsp;Reckitt Benckiser&amp;nbsp;(RB.), spirits firm&amp;nbsp;Diageo&amp;nbsp;(DGE), and&amp;nbsp;RELX&amp;nbsp;(REL) (the old Reed Elsevier, which generates over half its revenue in the US), are top of the pile.&lt;/p&gt;
+
+&lt;p&gt;The blue-chip index came within a point of a record high in early trade, and as I began writing this report was a handful of points off the pace. However, a new best looked likely sooner rather than later, and it duly delivered.&lt;/p&gt;
+</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="sections1">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>467017a0-6693-4167-b6f9-09fe05d10bd5</sv:value>
+    </sv:property>
+    <sv:property sv:name="imageLink" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:createdBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2017-06-01T15:54:59.253+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2017-06-02T15:45:57.853+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="text" sv:type="String">
+      <sv:value>&lt;p&gt;&lt;em&gt;Source: Interactive Investor. Past performance is not a reliable indicator of future returns.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;The chart above illustrated clearly how near the index was to breaking the obvious uptrend which can be traced back to the beginning of this year. A reliable lower line of support kicked in post the election call last month.&lt;/p&gt;
+
+&lt;p&gt;A move above that top line would, as is typically the case with breakouts, be dramatic. In little over half an hour before midday, the FTSE 100 added a quickfire 23 points to that new peak at 7,563.&lt;/p&gt;
+
+&lt;p&gt;It would have made virgin territory much earlier had the mining sector been in the game. Instead,&amp;nbsp;Rio Tinto&amp;nbsp;(RIO),&amp;nbsp;Glencore&amp;nbsp;(GLEN),&amp;nbsp;BHP Billiton&amp;nbsp;(BLT) and&amp;nbsp;Anglo American&amp;nbsp;(AAL) hog the list of worst performers.&lt;/p&gt;
+
+&lt;p&gt;China&amp;#39;s manufacturing purchasing managers index (PMI) was steady at 51.2 in May, we&amp;#39;re told, in line with expectations.&lt;/p&gt;
+
+&lt;p&gt;However, analysts are looking further down the track, fearing the impact of likely US interest rate rises on the Chinese yuan. Increasing the cost of imports for buyers in China would dampen demand.&lt;/p&gt;
+</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>

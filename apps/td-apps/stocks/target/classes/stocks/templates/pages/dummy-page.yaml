@@ -1,0 +1,10 @@
+templateScript: /stocks/templates/pages/dummy-page.ftl
+renderType: freemarker
+visible: true
+dialog: stocks:pages/dummy-page-properties
+areas:
+  main:
+    renderType: freemarker
+    availableComponents:
+      dummy-component:
+        id: stocks:components/dummy-component

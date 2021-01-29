@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sv:node sv:name="why-income-seekers-should-be-looking-beyond-the-uk" xmlns:sv="http://www.jcp.org/jcr/sv/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>mgnl:ii-views-article</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:uuid" sv:type="String">
+    <sv:value>36c8b896-64b5-4826-9ea6-8e7c0f57ee20</sv:value>
+  </sv:property>
+  <sv:property sv:name="author" sv:type="String">
+    <sv:value>69130bbf-7058-4919-ac2e-6a1624740db4</sv:value>
+  </sv:property>
+  <sv:property sv:name="excerpt" sv:type="String">
+    <sv:value>For years, UK equity income funds have been bestsellers, and many have chugged along steadily producing annual yields of around 3-5%. However, there are strong arguments for income-seekers to diversify globally, particularly at this juncture.</sv:value>
+  </sv:property>
+  <sv:property sv:name="featured" sv:type="String">
+    <sv:value>jcr:71846e69-b3ca-4a62-ada2-6405e70c8d20</sv:value>
+  </sv:property>
+  <sv:property sv:name="jcr:createdBy" sv:type="String">
+    <sv:value>admin</sv:value>
+  </sv:property>
+  <sv:property sv:name="keywords" sv:type="String">
+    <sv:value>Investing outside UK</sv:value>
+  </sv:property>
+  <sv:property sv:name="metaTitle" sv:type="String">
+    <sv:value>Why income seekers should be looking beyond the UK</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:created" sv:type="Date">
+    <sv:value>2017-06-01T15:42:51.172+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:createdBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+    <sv:value>2017-06-02T17:01:43.010+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+    <sv:value>superuser</sv:value>
+  </sv:property>
+  <sv:property sv:name="publishDate" sv:type="Date">
+    <sv:value>2017-06-01T00:00:00.000+01:00</sv:value>
+  </sv:property>
+  <sv:property sv:name="robots" sv:type="String">
+    <sv:value>none</sv:value>
+  </sv:property>
+  <sv:property sv:name="title" sv:type="String">
+    <sv:value>Why income seekers should be looking beyond the UK</sv:value>
+  </sv:property>
+  <sv:node sv:name="sections0">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>846cec2a-3013-4dde-b9fa-d05514bc6d8e</sv:value>
+    </sv:property>
+    <sv:property sv:name="imageLink" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+    <sv:property sv:name="imageSrc" sv:type="String">
+      <sv:value>jcr:f2236128-6d37-4b75-94da-9ea3b82a3650</sv:value>
+    </sv:property>
+    <sv:property sv:name="intro" sv:type="String">
+      <sv:value>For years, UK equity income funds have been bestsellers, and many have chugged along steadily producing annual yields of around 3-5%. However, there are strong arguments for income-seekers to diversify globally, particularly at this juncture.</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:createdBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2017-06-01T15:42:51.173+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2017-06-02T17:01:43.010+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="text" sv:type="String">
+      <sv:value>&lt;p&gt;High-yielding stocks in the UK stand at inflated prices, and analysts are warning they may be forced to slash payouts to cut costs. Moreover, the prospect of a strengthened Conservative government after the general election has sent sterling higher, reducing the attractions of large domestic exporters, many of whom are big dividend payers.&lt;/p&gt;
+
+&lt;p&gt;Over recent periods the global equity income sector has consistently outperformed its UK counterpart in terms of total returns, returning 23.5% over one year and 36.1% over three years to 2 May, compared with 16.5 and 23.4% respectively for the UK equity income sector.&lt;/p&gt;
+
+&lt;p&gt;Several consistently outstanding global equity income funds offer plenty of options for investors. Your choice will depend on how you wish to diversify geographically and which sectors you favour.&lt;/p&gt;
+
+&lt;p&gt;Yields from the US S&amp;amp;P 500 index are lower than those from the major European markets, which tend to average around 3.5%.&lt;/p&gt;
+
+&lt;p&gt;Yields on Asian stocks are around 2.5% a year, but they offer greater opportunity for capital gain because they are on lower valuations, with price/earnings ratios of around 15 times, compared with 35 on the&amp;nbsp;FTSE All-Share index&amp;nbsp;(AXX). Furthermore, Asian companies are not suffering supply cost inflation and should continue to generate the free cash to pay dividends.&lt;/p&gt;
+
+&lt;p&gt;But care needs to be taken. Some funds five-year plus are heavily slanted to the US, which carries a 47% weighting in MSCI&amp;#39;s World High Dividend Yield index; the table below shows six of the top 10 fund performers over the past three years have a weighting of 40% plus.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Top Ten Global Equity Income Funds Over Three Years&lt;/strong&gt;&lt;/p&gt;
+</sv:value>
+    </sv:property>
+  </sv:node>
+  <sv:node sv:name="sections1">
+    <sv:property sv:name="jcr:primaryType" sv:type="Name">
+      <sv:value>mgnl:contentNode</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:uuid" sv:type="String">
+      <sv:value>c5287b71-2c0b-42c4-94f1-39a162f7acf2</sv:value>
+    </sv:property>
+    <sv:property sv:name="imageLink" sv:type="String">
+      <sv:value>internal</sv:value>
+    </sv:property>
+    <sv:property sv:name="jcr:createdBy" sv:type="String">
+      <sv:value>admin</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:created" sv:type="Date">
+      <sv:value>2017-06-02T17:00:26.188+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:createdBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModified" sv:type="Date">
+      <sv:value>2017-06-02T17:01:43.011+01:00</sv:value>
+    </sv:property>
+    <sv:property sv:name="mgnl:lastModifiedBy" sv:type="String">
+      <sv:value>superuser</sv:value>
+    </sv:property>
+    <sv:property sv:name="text" sv:type="String">
+      <sv:value>&lt;p&gt;&lt;em&gt;Source: Interactive Investor/Trustnet, as at 2 May 2017&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;While there is nothing wrong in having a meaty position in the US, it is currently widely viewed as expensive; moreover, investors may prefer a manager that sticks less rigidly to a global index.&lt;/p&gt;
+
+&lt;p&gt;For those who wish to buy more than one global equity income fund, there is also the risk of putting all their eggs in the same basket. Investors should therefore look under the bonnet to ensure they are getting an adequate amount of diversification on a geographic level.&lt;/p&gt;
+
+&lt;p&gt;To that end, it&amp;#39;s worth looking out for funds that make a point of holding less in the US, including&amp;nbsp;Baillie Gifford Global Income Growth&amp;nbsp;and&amp;nbsp;Artemis Global Income. The Baillie Gifford fund manager James Dow argues that the US does not have a culture of big dividend payments, so the fund has just 30-35% in the region; but it is overweight in Australia and Brazil, where the dividend culture is more entrenched.&lt;/p&gt;
+
+&lt;h2&gt;UK-quoted global firms&lt;/h2&gt;
+
+&lt;p&gt;Dow also likes UK companies such as&amp;nbsp;WPP&amp;nbsp;(WPP) and&amp;nbsp;Experian&amp;nbsp;(EXPN), which have global exposure but are quoted in London, where boards are committed to a progressive policy on dividends through good times and bad.&lt;/p&gt;
+
+&lt;p&gt;&amp;quot;The basis of what we&amp;#39;re doing is trying to find companies that can continue to grow on a five-year-plus horizon,&amp;quot; he says. &amp;quot;Oil companies in particular need to put billions back into the ground just to stand still.&amp;nbsp;BP&amp;nbsp;(BP.) and&amp;nbsp;Shell&amp;nbsp;(RDSB) are so capital-intensive that they have to borrow.&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;The Artemis Global Income fund, managed by Jacob de Tusch-Lec, continues to favour Europe, where valuations are much cheaper than the US. As well as being light on US exposure, de Tusch-Lec keeps the fund&amp;#39;s UK content relatively low. For income investors seeking diversification, therefore, it will complement existing UK equity income holdings.&lt;/p&gt;
+
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Remember that each fund is unique and hence exposed to different levels of risk. Some are relatively low risk, whilst others can be very risky and those will only be appropriate for more sophisticated investors.&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;If you are unsure about the suitability of a particular investment or think that you need a personal recommendation, you should speak to a suitably qualified financial adviser. You should also read the Key Investor Information Document (KIID) about the fund(s) you are considering.&lt;/em&gt;&lt;/p&gt;
+</sv:value>
+    </sv:property>
+  </sv:node>
+</sv:node>
